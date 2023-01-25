@@ -1,0 +1,1257 @@
+---
+title: "Finalized Analyses"
+author: "Zach Schroeder"
+date: "1/25/2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Package Loading}
+library(stringr)
+library(rio)
+library(apaTables) # for correlation tables
+library(pwr)
+#library(multicon)
+#library(corx)
+#library(broom)
+#library(car)
+#library(ggdag)
+library(psych) # for covariance and correlation functions
+library(tidyverse)
+library(dplyr)
+library(knitr)
+#library(DataCombine)
+#library(emmeans)
+library(here)
+library(janitor)
+library(lubridate)
+library(sjPlot)
+library(Hmisc)
+library(jtools)
+#library(ggpubr)
+
+here::here()
+```
+
+# Data Import and Cleaning
+
+## Study 1 
+```{r Study 1 Data Cleaning, include=FALSE, echo=FALSE}
+# Import Study 1 Data
+data_study1_fall <- import(here("Data", "Fall19_data.csv"), 
+                      setclass = "tb_df")
+
+#naming columns with variable names
+colnames(data_study1_fall) <- c("date", "condition", "age",  "gender",  "gender_spec", 
+                     "race", "race_spec", 
+                    "feedback_perc", "prof_conf", "encourag", 
+                    "self_valence", "class_choice", "prof_relat", "self_rank", 
+                    "sob_1", "sob_2", "sob_3", "sob_4", "sob_5", 
+                    "sob_6", "sob_7", "sob_8", "sob_9", "sob_10", 
+                    "sob_11", "sob_12", "sob_13", "sob_14", "sob_15", 
+                    "sob_16", "sob_17", "sob_18", 
+                    "aus_1", "aus_2", "aus_3", "aus_4", "aus_5", 
+                    "aus_6", "aus_7", "aus_8", "aus_9", "aus_10", 
+                    "aus_11", "aus_12", "sob_19", "sob_20", 
+                    "major", "dom_intl_student")
+
+data_study1_fall$race <- factor(data_study1_fall$race, 
+                     levels = c("1", "8", "9", "10", "12", 
+                                "14", "16", "17", "18"), 
+                     labels = c("indig", "asian", "black", "latinx", "middle_east",
+                                "pi", "white", "other", "na"))
+```
+
+```{r Winter Data, include = FALSE, echo=FALSE}
+# Import Winter 2020 data
+data_study1_winter <- import(here::here("Data", "Winter20_data.csv"), 
+                setclass = "tb_df")
+
+# Import Winter 2020 Data condition file
+data_study1_winter_conditions <- import(here("Data", "winter_conditions.csv"), 
+                     setclass = "tb_df")
+
+
+# Combine condition file
+data_study1_winter$condition <- data_study1_winter_conditions$FL_45_DO
+# Remove wintercond file
+rm(data_study1_winter_conditions)
+# Rearrange winter data to match order of fall data
+data_study1_winter <- data_study1_winter %>% 
+  select(RecordedDate, condition, Age, Gender, Q328_4_TEXT, Race, Race_8_TEXT, Q149, Q138, Q139, Q140, Q141, Q150, Q144,  everything()) %>% 
+  select(-Q1.1, -Q328, -Q1.3_17_TEXT, -Q1.3)
+
+#rename columns
+colnames(data_study1_winter) <- c("date", "condition", "age",  "gender",  
+                     "gender_spec", "race", "race_spec", 
+                    "feedback_perc", "prof_conf", "encourag", 
+                    "self_valence", "class_choice", "prof_relat", "self_rank", 
+                    "sob_1", "sob_2", "sob_3", "sob_4", "sob_5",
+                    "sob_6", "sob_7", "sob_8", "sob_9", "sob_10", 
+                    "sob_11", "sob_12", "sob_13", "sob_14", "sob_15", 
+                    "sob_16", "sob_17", "sob_18", 
+                    "aus_1", "aus_2", "aus_3", "aus_4", "aus_5", 
+                    "aus_6", "aus_7", "aus_8", "aus_9", "aus_10", 
+                    "aus_11", "aus_12", 
+                    "sob_19", "sob_20", "major", "dom_intl_student")
+
+# Remove winter title rows
+data_study1_winter <- data_study1_winter[-c(1,2),]
+
+# Removing strings to better force into factors when combined
+data_study1_winter$gender <- gsub("Female", "1", data_study1_winter$gender)
+data_study1_winter$gender <- gsub("Male", "2", data_study1_winter$gender)
+data_study1_winter$gender <- gsub("Not listed here", "4", data_study1_winter$gender)
+
+data_study1_winter$class_choice <- factor(data_study1_winter$class_choice, labels = c(NA, "2", "1", "3")) %>% as.numeric()
+
+data_study1_winter$self_rank <- gsub("Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle)", "4", data_study1_winter$self_rank)
+
+data_study1_winter$self_rank <- gsub("In the top 5 best students (Better than 95 other students)", "1", data_study1_winter$self_rank)
+data_study1_winter$self_rank <- gsub("In the top 10 best students (Better than 90 other students)", "2", data_study1_winter$self_rank)
+data_study1_winter$self_rank <- gsub("In the top 30 best students (Better than 70 other students)", "3", data_study1_winter$self_rank)
+
+data_study1_winter$self_rank <- gsub("In the 30 worst students (70 other students are better than you)", "5", data_study1_winter$self_rank)
+data_study1_winter$self_rank <- gsub("In the 10 worst students (90 other students are better than you)", "6", data_study1_winter$self_rank)
+data_study1_winter$self_rank <- gsub("In the 5 worst students (95 other students are better than you)", "7", data_study1_winter$self_rank)
+
+data_study1_winter$self_rank <- factor(data_study1_winter$self_rank, levels = c("In the top 5 best students (Better than 95 other students)",
+                                                      "In the top 10 best students (Better than 90 other students)",
+                                                      "In the top 30 best students (Better than 70 other students)",
+                                                      "Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle)", "In the 30 worst students (70 other students are better than you)","In the 10 worst students (90 other students are better than you)"),
+                          labels = c("1", "2", "3", "4", "5", "6"))
+data_study1_winter$self_rank <- as.numeric(data_study1_winter$self_rank)
+
+# Removing character strings from likerts
+data_study1_winter$feedback_perc <- as.integer(gsub("[^0-9]", "", data_study1_winter$feedback_perc))
+data_study1_winter$prof_conf <- as.integer(gsub("[^0-9]", "", data_study1_winter$prof_conf))
+data_study1_winter$encourag <- as.integer(gsub("[^0-9]", "", data_study1_winter$encourag))
+data_study1_winter$self_valence <- as.integer(gsub("[^0-9]", "", data_study1_winter$self_valence))
+data_study1_winter$prof_conf <- as.integer(gsub("[^0-9]", "", data_study1_winter$prof_conf))
+data_study1_winter$prof_relat <- as.integer(gsub("[^0-9]", "", data_study1_winter$prof_relat))
+# Creating levels and labels for race factor
+lev <- c("African",
+         "African,Hispanic/Latino", 
+                                "African,Other", 
+                                "Arab", 
+                                "Asian or Pacific Islander", 
+                                "Asian or Pacific Islander,Arab", 
+                                "Asian or Pacific Islander,Indian", 
+                                "Caucasian", 
+                                "Caucasian,African", 
+                                "Caucasian,Asian or Pacific Islander", 
+                                "Caucasian,Asian or Pacific Islander,Native American", 
+                                "Caucasian,Hispanic/Latino", 
+                                "Caucasian,Indian", 
+                                "Caucasian,Native American", 
+                                "Caucasian,Native American,Hispanic/Latino", 
+                                "Caucasian,Other", 
+                                "Hispanic/Latino", 
+                                "Native American", 
+                                "Native American,Hispanic/Latino", 
+                                "Other")
+lab <- c("black", "black", "black", "middle_east", "asian", "asian", "asian", "white", "black", "asian", "asian", "latinx", "asian", "indig", "white", "other", "latinx", "indig", "indig", "other")
+faclab <- cbind(lev, lab)
+
+data_study1_winter$race <- factor(data_study1_winter$race,
+                     levels = lev,
+                     labels = lab)
+```
+
+```{r Combine Study 1 Fall and Winter Data, include = FALSE, echo=FALSE}
+data_study1 <- rbind(data_study1_fall, data_study1_winter)
+```
+
+```{r Clean Study 1 Full Data, include = FALSE, echo = FALSE}
+# Removing incomplete cases
+data_study1 <- data_study1 %>% 
+  filter(data_study1$condition != "")
+
+# CONDITION
+data_study1 <- mutate_if(data_study1, 
+                is.character, 
+                str_replace_all, pattern = "ZS.F19.C1", 
+                replacement = "hard") 
+data_study1 <- mutate_if(data_study1, 
+                is.character, 
+                str_replace_all, pattern = "ZS.F19.C2", replacement = "easy")
+data_study1$condition <- as.factor(data_study1$condition)
+
+# AGE
+data_study1$age <- as.numeric(data_study1$age)
+
+# GENDER
+data_study1 <- data_study1 %>% 
+  filter(data_study1$gender != 4)
+data_study1 <- data_study1 %>% 
+  filter(data_study1$gender != "")
+data_study1$gender <- factor(data_study1$gender, levels = c("1", "2"),
+                      labels = c("Women", "Men"))
+
+# RACE 
+data_study1$race <- as.factor(data_study1$race)
+
+# DOMESTIC/INTERNATIONAL STUDENT
+data_study1$dom_intl_student <- factor(data_study1$dom_intl_student,
+                                          levels = c("1","U.S. Student","2","International Student"),
+                                          labels = c("us", "us", "intl", "intl")) 
+
+# CLASS CHOICE
+data_study1$class_choice <- factor(data_study1$class_choice, 
+                                   levels = c("", "1", "2", "3"), 
+                                   labels = c("NA", "easy", "hard", "other"))
+
+
+data_study1[,8:46][data_study1[,8:46] == 6] <- 4 #Likert scales were entered in as 1,2,3,6,7; re-coding to reflect the actual values
+data_study1[,8:46][data_study1[,8:46] == 7] <- 5
+
+# Reverse Coding Variables & Creating Composites
+# Higher values = more belonging
+
+cols.num <- c(15:46)
+data_study1[cols.num] <- sapply(data_study1[cols.num],as.numeric)
+
+data_study1[,c(16, 19, 21, 22, 25, 26, 28, 33, 34, 36, 38, 39, 41, 44)] <- 6 - data_study1[,c(16, 19, 21, 22, 25, 26, 28, 33, 34, 36, 38, 39, 41, 44)]
+
+# Intellectual Belonging
+aus <- data_study1 %>% select(starts_with("aus"))
+data_study1$intellectual_belonging <- rowMeans(aus, na.rm = TRUE)
+
+# Social Belonging
+sob <- data_study1 %>% select(starts_with("sob"))
+data_study1$social_belonging <- rowMeans(sob, na.rm = TRUE)
+
+#Creating Composite interaction perception score
+interaction_perception <- data_study1 %>% select(prof_conf, self_valence, feedback_perc, prof_relat)
+data_study1$interaction_perception <- rowMeans(interaction_perception, na.rm = TRUE)
+
+study_1_scale_alphas <- list(
+  intellectual_belonging = psych::alpha(aus)$total$raw_alpha,
+  social_belonging = psych::alpha(sob)$total$raw_alpha,
+  interaction_perception = psych::alpha(interaction_perception)$total$raw_alpha
+)
+
+# Reverse scoring self rank
+data_study1$self_rank = 6-data_study1$self_rank
+  
+# subsetting data 
+data_study_1 <- data_study1 %>% 
+  select(condition, age, gender, race, interaction_perception, social_belonging, intellectual_belonging, class_choice, self_rank, major)
+```
+
+
+## Study 2 
+
+```{r Study 2 Data Import and Cleaning, include = FALSE, echo=FALSE}
+# Import Spring 2020 data
+data_study2 <- import(here::here("Data", "ZS.S20GS.xlsx"), setclass = "tb_df")
+
+#rename columns
+colnames(data_study2) <- c("duration", "finished", "date", 
+                           "feedback_perc", "prof_conf", "encourag",
+                           "self_valence", "class_choice", "prof_relat",
+                           "self_rank", 
+                           "sob_1", "sob_2", "sob_3", "sob_4", "sob_5",
+                           "sob_6", "sob_7", "sob_8", "sob_9", "sob_10",
+                           "sob_11", "sob_12", "sob_13", "sob_14", "sob_15",
+                           "sob_16", "sob_17", "sob_18",
+                           "aus_1", "aus_2", "aus_3", "aus_4", 
+                           "aus_5", "aus_6", "aus_7", "aus_8", 
+                           "aus_9", "aus_10", "aus_11", "aus_12",
+                           "sob_19", "sob_20", 
+                           "major", "dom_intl_student", "age", 
+                           "gender", "gender_spec", 
+                           "race", "race_spec", 
+                           "duration_total", "ID")
+table(data_study2$gender)
+data_study2 <- data_study2 %>% 
+  mutate(
+    self_rank = factor(data_study2$self_rank, 
+                       levels = c(1, 2, 3, 4, 5, 6),
+                       labels = c("In the top 5 best students (Better than 95 other students)",
+                                  "In the top 10 best students (Better than 90 other students)",
+                                  "In the top 30 best students (Better than 70 other students)",
+                                  "Around the middle of the class (not the top 30 students nor 
+                                      the bottom 30 students. One of 40 students in the middle)", 
+                                  "In the 30 worst students (70 other students are better than you)",
+                                  "In the 10 worst students (90 other students are better than you)")),
+    gender = factor(gender, labels = c("Female", "Male", "NA", "NA")),
+    class_choice = factor(class_choice, 
+                          levels = c("1", "2", "3"), labels = c("easy_major", "hard_major", "easy_non")),
+    interaction_perception = rowMeans(data_study2 %>% select(feedback_perc, prof_relat, prof_conf, self_valence), na.rm = TRUE)
+  )
+
+#Likert scales were entered in as 1,2,3,6,7; recoding to reflect the actual values
+data_study2[,11:42][data_study2[,11:42] == 6] <- 4 
+data_study2[,11:42][data_study2[,11:42] == 7] <- 5
+```
+
+```{r Study 2 SOB and AUS, include = FALSE, echo=FALSE}
+### SOB 
+sob_key <- c(1, -1, 1, 1, 
+             -1, 1, -1, -1, 
+             1, 1, -1, -1, 
+             1, -1, 1, 1, 
+             1, 1, 
+             1, 1)
+sob_spring <- data_study2 %>% select(starts_with("sob"))
+sob_spring <- psych::reverse.code(data_study2 %>% select(starts_with("sob")),
+                                  keys = sob_key)
+
+### AUS 
+aus_key <- c(-1, -1, 1, -1, 
+             1, -1, -1, 1, 
+             -1, 1, 1, -1)
+aus_spring <- data_study2 %>% select(starts_with("aus"))
+aus_spring <- psych::reverse.code(data_study2 %>% select(starts_with("aus")),
+                                  keys = aus_key)
+
+
+data_study2 <- data_study2 %>% 
+  mutate(
+    intellectual_belonging = rowMeans(aus_spring, na.rm = TRUE),
+    social_belonging = rowMeans(sob_spring, na.rm = TRUE)
+  )
+
+data_study2 <- droplevels(data_study2[!data_study2$gender == 'NA',])
+```
+
+```{r Study 2 Dataframe}
+# ALPHAS
+study_2_scale_alphas <- list(
+  intellectual_belonging = psych::alpha(aus_spring)$total$raw_alpha,
+  social_belonging = psych::alpha(sob_spring)$total$raw_alpha,
+  interaction_perception = psych::alpha(data_study2 %>% 
+                                          select(feedback_perc, prof_relat, 
+                                          prof_conf, self_valence))$total$raw_alpha
+)
+
+# Smaller tibble
+data_study_2 <- data_study2 %>% 
+  select(age, gender, race, interaction_perception, social_belonging, intellectual_belonging,
+         class_choice, self_rank, major)
+```
+
+```{r Study 2 Race}
+data_study_2$race <- factor(as.character(data_study_2$race),
+                                      levels = c("1", "8", "9", "10", "12", 
+                                                 "14", "16", "17", "18"),
+                                      labels = c("other", "aapi", "black", 
+                                                 "latinx", "other", "aapi", 
+                                                 "white", "other", "NA"))
+```
+
+```{r Study 2 Filter missing }
+data_study_2 <- data_study_2 %>% filter(!is.na(interaction_perception))
+```
+
+```{r Global Envir Cleanup, echo=FALSE, warning=FALSE}
+rm(aus, aus_spring, data, data_spring, dataf, dataw, faclab, interaction_perception, sob, sob_spring,
+   data_study1, data_study1_winter_conditions, data_study1_fall, data_study1_winter, data_study2)
+```
+
+## Study 3
+
+```{r Study 3 Import and Cleaning}
+data_study3_summer = import(here::here("Data", "ZS_GS_Summer2020.coded.xlsx"), setclass = "tb_df") %>% 
+  characterize() %>% 
+  clean_names()
+
+data_study3_fall = import(here::here("Data", "ZS.F20.coded.xlsx"), setclass = "tb_df") %>% 
+  characterize() %>% 
+  clean_names()
+```
+
+```{r Study 3 Cleaning}
+colnames(data_study3_summer) <- c("date", "ID", "age", "gender", "gender_desc", "race", "race_desc", 
+             "inxn_desc", "scenario_thoughts", "typical_feelings", "imagined_feelings",
+             "grade", "course", "f_val", "f_conf", "f_encourag", "f_int", "class_e", "class_d", "class_nm", "f_rel", "percent", "major", "citizen", "prof_gender",
+             "aus1", "aus2", "aus3", "aus4", "aus5", "aus6", "aus7", "aus8", "aus9", "aus10", "aus11", "aus12", 
+             "sob1", "sob2", "sob3", "sob4", "sob5", "sob6", "sob7", "sob8", "sob9", "sob10",
+             "sob11", "sob12", "sob13", "sob14", "sob15", "sob16", "sob17", "sob18", "sob19", "sob20",
+             "sob21", "sob22", "sob23", "sob24", "sob25", "sob26", "sob27", "sob28", "sob29", "sob30", "stem_class")
+colnames(data_study3_fall) <- c("date", "ID",  
+             "inxn_desc", "scenario_thoughts", "typical_feelings", "imagined_feelings",
+             "grade", "course", "f_val", "f_conf", "f_encourag", "f_int", "class_e", "class_d", "class_nm", "f_rel", "percent", "major", "citizen", "prof_gender",
+             "aus1", "aus2", "aus3", "aus4", "aus5", "aus6", "aus7", "aus8", "aus9", "aus10", "aus11", "aus12", 
+             "sob1", "sob2", "sob3", "sob4", "sob5", "sob6", "sob7", "sob8", "sob9", "sob10",
+             "sob11", "sob12", "sob13", "sob14", "sob15", "sob16", "sob17", "sob18", "sob19", "sob20",
+             "sob21", "sob22", "sob23", "sob24", "sob25", "sob26", "sob27", "sob28", "sob29", "sob30",
+             "sapa1", "sapa2", "sapa3", "sapa4", "sapa5", "sapa6", "sapa7", "sapa8", "sapa9", "sapa10",
+             "sapa11", "sapa12", "sapa13", "sapa14", "sapa15", "sapa16", "sapa17", "sapa18", "sapa19", "sapa20",
+             "age", "gender", "gender_desc", "race", "race_desc", "stem_class")
+
+```
+
+```{r Study 3 Categorical Var Cleaning}
+# RACE LEVELS
+data_study3_summer$race <- factor(data_study3_summer$race,
+                      levels = c(1, 8, 9, 10, 14, 16, 17, 18),
+                      labels = c("indig", "asian",  "black",  "latinx", "pacisl", "white", "other", "no_ans"))
+
+data_study3_fall$race <- factor(data_study3_fall$race,
+                      levels = c(1, 8, 9, 10, 12, 14, 16, 17, 18),
+                      labels = c("indig", "asian",  "black",  "latinx", "meast", "pacisl", "white", "other", "no_ans"))
+pre_g_cut1 <- table(data_study3_summer$gender)
+pre_g_cut <- table(data_study3_fall$gender)
+
+# GENDER LEVELS
+data_study3_summer <- data_study3_summer %>% 
+  filter(gender < 3)
+data_study3_summer$gender <- factor(data_study3_summer$gender,
+                      levels = c(1, 2),
+                      labels = c("Women", "Men"))
+
+data_study3_fall <- data_study3_fall %>% 
+  filter(gender < 3)
+data_study3_fall$gender <- factor(data_study3_fall$gender,
+                      levels = c(1, 2),
+                      labels = c("Women", "Men"))
+```
+
+```{r Study 3 Continuous Var Cleaning}
+# REVERSE CODED VARIABLES
+sob_key <- c(1, 1, 1, 1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, 1, 1)
+aus_key <- c(-1, -1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1)
+
+# Social Belonging
+study_3_sob <- rbind(data_study3_summer %>% select(starts_with("sob")), data_study3_fall %>% select(starts_with("sob")))
+study_3_sob <- reverse.code(sob_key, study_3_sob)
+
+# Intellectual Belonging
+study_3_aus <- rbind(data_study3_summer %>% select(starts_with("aus")), data_study3_fall %>% select(starts_with("aus")))
+study_3_aus <- reverse.code(aus_key, rbind(data_study3_summer %>% select(starts_with("aus")), data_study3_fall %>% select(starts_with("aus"))))
+
+# Interaction Perception
+study_2_interactin_perception <- rbind(data_study3_summer %>% select(f_val, f_conf, f_int, f_rel), 
+                                       data_study3_fall %>% select(f_val, f_conf, f_int, f_rel))
+
+study_3_scale_alphas <- list(
+  intellectual_belonging = psych::alpha(study_3_aus)$total$raw_alpha,
+  social_belonging = psych::alpha(study_3_sob)$total$raw_alpha,
+  interaction_perception = psych::alpha(study_2_interactin_perception)$total$raw_alpha
+)
+```
+
+```{r Combined DF for Study 3 Cleaning}
+data_study3_summer <- data_study3_summer %>% 
+  select(age, gender, race, inxn_desc, 
+         scenario_thoughts, typical_feelings, imagined_feelings, 
+         grade, course, stem_class, class_e, class_d, class_nm, percent, major,
+         prof_gender, course)
+
+data_study3_fall <- data_study3_fall %>% 
+  select(age, gender, race, inxn_desc, 
+         scenario_thoughts, typical_feelings, imagined_feelings, 
+         grade, course, stem_class, class_e, class_d, class_nm, percent, major, 
+         prof_gender, course)
+
+d <- rbind(data_study3_summer, data_study3_fall)
+
+d <- d %>% mutate(
+  intellectual_belonging = rowMeans(study_3_aus, na.rm = TRUE),
+  social_belonging = rowMeans(study_3_sob, na.rm = TRUE),
+  interaction_perception = rowMeans(study_2_interactin_perception, na.rm = TRUE)
+)
+# QUICK CODING PROFESSOR GENDER
+
+d$prof_gender <- factor(d$prof_gender, 
+                        levels = c("1", "1,2", "2", "3", "4", "5"),
+                        labels = c("Man","DoesntMatter", "Woman", "DoesntMatter", "dontKnow", "other"))
+
+
+
+d$age <- as.numeric(d$age)
+
+# Class Imagined Grades
+
+d$grade <- factor(d$grade) %>% 
+  fct_collapse(., 
+               Aplus = c("1"),
+               A = c('#95', "2", "2,"), 
+               Amin = c('#100, #80', '#90',"3", "2, 3", 
+                        "2, 4", "2, 5", "3, 2", "3, 4",
+                        "4, 2", "4, 3, 2, 1"),
+               Bplus = c('#88', '#89', "4", "4,", "4, 3", "5, 2"),
+               B = c('#84', '#85', "5", "5, #80, #89", "5, 4"), 
+               Bmin = c('#80', '#80, #85', "6", "5, 6", "6, 7"), 
+               Cplus = c("7", "5, 8", "6, 7, 8", "7, 6", "7, 8", "8, 5", "8, 6"),
+               C = c("#70, #80", '#74', "8"), 
+               Cmin = c("#70", "9"),
+               Dplus = c("10", "8, 11"),
+               D = c("11", "13, 8"), 
+               Dmin = c("12"),
+               Fail = c("#3.5", "#50", "13"),
+               remove = c("14", "15")
+               )
+
+d$grade <- factor(d$grade, 
+                  levels = rev(c(
+                  "Aplus","A","Amin",
+                  "Bplus","B","Bmin",
+                  "Cplus","C","Cmin",
+                  "Dplus","D","Dmin",
+                  "Fail","remove")))
+
+# levels(d$grade)
+
+gradlev <- tibble(levels(d$grade))
+
+d$stem_class <- factor(d$stem_class,
+                       levels = c(0, 1),
+                       labels = c("Non-STEM", "STEM"))
+```
+
+```{r Clean Study 3 Dataframe}
+data_study_3 <- d
+data_study_3 <- data_study_3 %>% filter(!is.na(interaction_perception))
+rm(d, data_study3_fall, data_study3_summer, gradlev, study_3_aus, study_2_interactin_perception, study_3_sob, data_study2_fall, data_study2_summer)
+```
+
+# Descriptive Statistics
+
+## Demographics
+
+### Study 1
+
+```{r}
+table(data_study_1$gender)
+table(data_study_1$race)
+```
+
+### Study 2
+
+```{r}
+table(data_study_2$gender)
+table(data_study_2$race)
+```
+
+### Study 3
+```{r}
+table(data_study_3$gender)
+table(data_study_3$race)
+```
+
+## Failed Manipulation
+
+```{r}
+bad_manipulation <- lm(interaction_perception ~ condition,
+            data = data_study_1)
+summary(bad_manipulation)
+t.test(interaction_perception ~ condition,
+       data_study_1)
+```
+
+
+## Means and SDs
+
+### Study 1
+
+```{r}
+data_study_1 %>% 
+  group_by(gender) %>% 
+  summarise(
+    mean_fp = mean(interaction_perception, na.rm = TRUE),
+    sd_fp = sd(interaction_perception, na.rm = TRUE),
+    mean_sb = mean(social_belonging, na.rm = TRUE),
+    sd_sb = sd(social_belonging, na.rm = TRUE),
+    mean_ib = mean(intellectual_belonging, na.rm = TRUE),
+    sd_ib = sd(intellectual_belonging, na.rm = TRUE),
+  ) %>% 
+  knitr::kable()
+```
+
+### Study 2
+
+```{r}
+data_study_2 %>% 
+  group_by(gender) %>% 
+  summarise(
+    mean_fp = mean(interaction_perception, na.rm = TRUE),
+    sd_fp = sd(interaction_perception, na.rm = TRUE),
+    mean_sb = mean(social_belonging, na.rm = TRUE),
+    sd_sb = sd(social_belonging, na.rm = TRUE),
+    mean_ib = mean(intellectual_belonging, na.rm = TRUE),
+    sd_ib = sd(intellectual_belonging, na.rm = TRUE),
+  ) %>% 
+  knitr::kable()
+```
+
+### Study 3
+
+```{r}
+data_study_3 %>% 
+  group_by(gender) %>% 
+  summarise(
+    mean_fp = mean(interaction_perception, na.rm = TRUE),
+    sd_fp = sd(interaction_perception, na.rm = TRUE),
+    mean_sb = mean(social_belonging, na.rm = TRUE),
+    sd_sb = sd(social_belonging, na.rm = TRUE),
+    mean_ib = mean(intellectual_belonging, na.rm = TRUE),
+    sd_ib = sd(intellectual_belonging, na.rm = TRUE),
+  ) %>% 
+  knitr::kable()
+```
+
+## Correlations Between and Gender Differences in Belonging Measures
+
+### Study 1
+
+```{r}
+cor(data_study_1$social_belonging, 
+    data_study_1$intellectual_belonging,
+    use = "pairwise.complete.obs")
+t.test(social_belonging ~ gender, data = data_study_1)
+t.test(intellectual_belonging ~ gender, data = data_study_1)
+```
+
+### Study 2
+
+```{r}
+cor(data_study_2$social_belonging, 
+    data_study_2$intellectual_belonging,
+    use = "pairwise.complete.obs")
+t.test(social_belonging ~ gender, data = data_study_2)
+t.test(intellectual_belonging ~ gender, data = data_study_2)
+```
+
+### Study 2
+
+```{r}
+cor(data_study_3$social_belonging, 
+    data_study_3$intellectual_belonging,
+    use = "pairwise.complete.obs")
+t.test(social_belonging ~ gender, data = data_study_3)
+t.test(intellectual_belonging ~ gender, data = data_study_3)
+t.test(percent ~ gender, data = data_study_3)
+t.test(as.numeric(grade) ~ gender, data = data_study_3)
+```
+
+# Predictors of Ambiguous Feedback Evaluation
+
+## Study 1 (Exploratory Hierarchical Regression) 
+
+Gender
+
+```{r Study 1: Gender}
+s1_gender <- lm(interaction_perception ~ gender,
+                data = data_study_1)
+summary(s1_gender)
+```
+
+Social Belonging
+
+```{r Study 1: Social Belonging}
+s1_sb <- lm(interaction_perception ~ social_belonging,
+            data = data_study_1)
+summary(s1_sb)
+```
+
+Gender + Social Belonging:
+
+```{r Study 1: Gender + Social Belonging}
+s1_gender_social_belonging <- lm(interaction_perception ~ gender + social_belonging,
+                                 data = data_study_1)
+summary(s1_gender_social_belonging)
+```
+
+```{r Study 1: Social Belonging * Gender Interaction}
+s1_sb_g_inxn <- lm(interaction_perception ~ gender * social_belonging,
+                                 data = data_study_1)
+summary(s1_sb_g_inxn)
+```
+
+Non-Significant Exploratory Models:
+
+```{r Study 1: Intellectual Belonging}
+s1_ib <- lm(interaction_perception ~ intellectual_belonging,
+            data = data_study_1)
+summary(s1_ib)
+```
+
+```{r Study 1: Intellectual Belonging + Gender}
+s1_ib_g <- lm(interaction_perception ~ intellectual_belonging + gender,
+            data = data_study_1)
+summary(s1_ib_g)
+```
+
+```{r Study 1: Intellectual Belonging * Gender}
+s1_ib_g <- lm(interaction_perception ~ intellectual_belonging * gender,
+            data = data_study_1)
+summary(s1_ib_g)
+```
+
+```{r Study 1: Variance-Loaded Model}
+s1_varloaded <- lm(interaction_perception ~ intellectual_belonging*gender +
+                       social_belonging*gender,
+            data = data_study_1)
+summary(s1_varloaded)
+```
+
+```{r Study 1: ANOVA}
+anova(s1_gender_social_belonging, s1_varloaded)
+```
+
+## Study 2
+
+Gender
+
+```{r Study 2: Gender}
+s2_gender <- lm(interaction_perception ~ gender,
+                data = data_study_2)
+summary(s2_gender)
+```
+
+Social Belonging
+
+```{r Study 2: Social Belonging}
+s2_sb <- lm(interaction_perception ~ social_belonging,
+            data = data_study_2)
+summary(s2_sb)
+```
+
+Gender + Social Belonging:
+
+```{r Study 2: Gender + Social Belonging}
+s2_gender_social_belonging <- lm(interaction_perception ~ gender + social_belonging,
+                                 data = data_study_2)
+summary(s2_gender_social_belonging)
+```
+
+Non-Significant Exploratory Models:
+
+```{r Study 2: Intellectual Belonging}
+s2_ib <- lm(interaction_perception ~ intellectual_belonging,
+            data = data_study_2)
+summary(s2_ib)
+```
+
+```{r Study 2: Intellectual Belonging + Gender}
+s2_ib_g <- lm(interaction_perception ~ intellectual_belonging + gender,
+            data = data_study_2)
+summary(s2_ib_g)
+```
+
+```{r Study 2: Intellectual Belonging * Gender}
+s2_ib_g <- lm(interaction_perception ~ intellectual_belonging * gender,
+            data = data_study_2)
+summary(s2_ib_g)
+```
+
+```{r Study 2: Social Belonging * Gender Interaction}
+s2_sb_g_inxn <- lm(interaction_perception ~ gender * social_belonging,
+                                 data = data_study_2)
+summary(s2_sb_g_inxn)
+```
+
+## Study 3
+
+Gender
+
+```{r Study 3: Gender}
+s3_gender <- lm(interaction_perception ~ gender,
+                data = data_study_3)
+summary(s3_gender)
+```
+
+Social Belonging
+
+```{r Study 3: Social Belonging}
+s3_sb <- lm(interaction_perception ~ social_belonging,
+            data = data_study_3)
+summary(s3_sb)
+```
+
+Gender + Social Belonging:
+
+```{r Study 3: Gender + Social Belonging}
+s3_gender_social_belonging <- lm(interaction_perception ~ gender + social_belonging,
+                                 data = data_study_3)
+summary(s3_gender_social_belonging)
+```
+
+Non-Significant Exploratory Models:
+
+```{r Study 3: Intellectual Belonging}
+s3_ib <- lm(interaction_perception ~ intellectual_belonging,
+            data = data_study_3)
+summary(s3_ib)
+```
+
+```{r Study 3: Intellectual Belonging + Gender}
+s3_ib_g <- lm(interaction_perception ~ intellectual_belonging + gender,
+            data = data_study_3)
+summary(s3_ib_g)
+```
+
+```{r Study 3: Intellectual Belonging * Gender}
+s3_ib_g <- lm(interaction_perception ~ intellectual_belonging * gender,
+            data = data_study_3)
+summary(s3_ib_g)
+```
+
+```{r Study 3: Social Belonging * Gender Interaction}
+s3_sb_g_inxn <- lm(interaction_perception ~ gender * social_belonging,
+                                 data = data_study_3)
+summary(s3_sb_g_inxn)
+```
+
+# Feedback Evaluation and Class Preference
+
+## Study 1
+
+```{r}
+data_study_1 <- data_study_1 %>% 
+  mutate(
+    class_choice = forcats::fct_collapse(class_choice, 
+                                         easy = c("easy", "other"))
+  )
+s1_class_choice <- glm(class_choice ~ interaction_perception, 
+                       family = "binomial", 
+                       data = data_study_1)
+
+summary(s1_class_choice)
+```
+
+## Study 2
+
+```{r}
+data_study_2 <- data_study_2 %>% 
+  mutate(
+    class_choice = forcats::fct_collapse(class_choice, 
+                                         easy = c("easy", "other"))
+  )
+s2_class_choice <- glm(class_choice ~ interaction_perception, 
+                       family = binomial(link = "logit"), 
+                       data = data_study_2)
+
+summary(s2_class_choice)
+```
+
+## Study 3
+
+Interaction Perception
+
+```{r }
+s3_class_hard <- lm(class_d ~ interaction_perception + gender,
+                   data = data_study_3)
+summary(s3_class_hard)
+
+### EASY
+
+s3_class_easy <- lm(class_e ~ interaction_perception + gender,
+                   data = data_study_3)
+summary(s3_class_easy)
+
+### Non-MAJOR
+
+s3_class_nm <- lm(class_nm ~ interaction_perception + gender,
+                   data = data_study_3)
+summary(s3_class_easy)
+```
+
+Gender
+
+```{r}
+s3_class_hard <- lm(class_d ~ gender,
+                   data = data_study_3)
+summary(s3_class_hard)
+
+### EASY
+
+s3_class_easy <- lm(class_e ~ gender,
+                   data = data_study_3)
+summary(s3_class_easy)
+
+### Non-MAJOR
+
+s3_class_nm <- lm(class_nm ~ gender,
+                   data = data_study_3)
+summary(s3_class_easy)
+```
+
+Controlling for Academic Standing
+
+```{r}
+## Hard
+
+s3_class_hard <- lm(class_d ~ as.numeric(grade),
+                   data = data_study_3)
+summary(s3_class_hard)
+
+## Easy
+
+s3_class_easy <- lm(class_e ~ as.numeric(grade),
+                   data = data_study_3)
+summary(s3_class_easy)
+
+## Non-Major
+
+s3_class_nm <- lm(class_nm ~ percent,
+                   data = data_study_3)
+summary(s3_class_nm)
+```
+
+# Exploratory Analyses
+
+## Controlling for Academic Standing
+
+```{r}
+levels(data_study_3$grade)
+new_grade_levels <- c("NA" = "remove",
+                      "0" = "Fail", 
+                      "0.7"  = "Dmin",
+                      "1"  = "D",
+                      "1.3"  = "Dplus",
+                      "1.7"  = "Cmin",
+                      "2"  = "C",
+                      "2.3"  = "Cplus",
+                      "2.7"  = "Bmin",
+                      "3"  = "B",
+                      "3.3"  = "Bplus",
+                      "3.7"  = "Amin",
+                      "4"  = "A",
+                      "4.3"  = "Aplus")
+data_study_3 <- data_study_3 %>% 
+  mutate(
+    gpa = forcats::fct_recode(data_study_3$grade,
+                    !!!new_grade_levels) %>% as.character() %>% as.numeric()
+  )
+data_study_3 %>% 
+  group_by(gender) %>% 
+  summarise(
+    mean = mean(gpa, na.rm = TRUE),
+    sd = sd(gpa, na.rm = TRUE),
+    mode = mode(as.factor(gpa))
+  )
+```
+
+```{r}
+t.test(data_study_3$gpa ~ data_study_3$gender)
+cor(data_study_3$gpa, data_study_3$percent, use = "pairwise.complete")
+```
+
+```{r Gender Percentile Plus Grade}
+academic_ctrl_perc <- lm(interaction_perception ~ percent + gpa + gender,
+                         data = data_study_3)
+summary(academic_ctrl_perc)
+```
+
+```{r}
+academic_ctrl_perc <- lm(interaction_perception ~ gender + percent,
+                         data = data_study_3)
+summary(academic_ctrl_perc)
+
+academic_ctrl_perc <- lm(interaction_perception ~ gender + grade,
+                         data = data_study_3)
+summary(academic_ctrl_perc)
+```
+
+## Free Response Text Analysis
+
+```{r Import Text Data}
+load(here::here("text_data.RData"))
+text_data <- text_data %>%  
+  select(-pid)
+data_study_3 <- left_join(data_study_3, text_data, na_matches = "never")
+data_study_3 <- data_study_3 %>% 
+  mutate(
+    self_num = as.numeric(self),
+    professor_num = as.numeric(professor), 
+    interaction_num = as.numeric(interaction)
+  )
+```
+
+### Typical Feelings When Talking to Faculty
+
+```{r}
+data_study_3 %>% 
+  group_by(gender) %>% 
+  summarise(
+    #meannegtyp = mean(negative_typical_feelings, na.rm = TRUE),
+    #sdnegtyp = sd(negative_typical_feelings, na.rm = TRUE),
+    #meanpostyp = mean(positive_typical_feelings, na.rm = TRUE),
+    #spostyp = sd(positive_typical_feelings, na.rm = TRUE),
+    # meannegscenario = mean(negative_scenario_thoughts, na.rm = TRUE),
+    # sdnegscenario = sd(negative_scenario_thoughts, na.rm = TRUE),
+    # meanposscenario = mean(positive_scenario_thoughts, na.rm = TRUE),
+    # sdposscenario = sd(positive_scenario_thoughts, na.rm = TRUE),
+    mean_self = mean(self_num, na.rm = TRUE),
+    sd_self = sd(self_num, na.rm = TRUE),
+    mean_inxn = mean(interaction_num, na.rm = TRUE),
+    sd_inxn = sd(interaction_num, na.rm = TRUE),
+    mean_prof = mean(professor_num, na.rm = TRUE),
+    sd_prof = sd(professor_num, na.rm = TRUE)
+  )
+```
+
+
+```{r Typical: Negative}
+t.test(data_study_3$negative_typical_feelings ~ data_study_3$gender)
+
+gender_negative_adj_typical <- lm(negative_typical_feelings ~ gender,
+                                  data = data_study_3)
+summary(gender_negative_adj_typical)
+```
+
+```{r Typical: Positive}
+t.test(data_study_3$positive_typical_feelings ~ data_study_3$gender)
+
+gender_positive_adj_typical <- lm(positive_typical_feelings ~ gender,
+                    data = data_study_3)
+summary(gender_positive_adj_typical)
+```
+
+### Imagined Scenario Feelings
+
+```{r Imagined: Negative}
+t.test(data_study_3$negative_scenario_thoughts ~ data_study_3$gender)
+
+gender_negative_adj_imagined <- lm(negative_imagined_feelings ~ gender,
+                                  data = data_study_3)
+summary(gender_negative_adj_imagined)
+```
+
+```{r Imagined: Positive}
+t.test(data_study_3$positive_scenario_thoughts ~ data_study_3$gender)
+
+gender_positive_adj_imagined <- lm(positive_imagined_feelings ~ gender,
+                    data = data_study_3)
+summary(gender_positive_adj_imagined)
+```
+
+## Interaction Description As Predictor of Interaction Perception
+
+```{r Gender Differences in Interaction Description: Self}
+self_ref_language <- lm(self_num ~ gender,
+                 data = data_study_3)
+summary(self_ref_language)
+```
+
+```{r Gender Differences in Interaction Description: Interaction}
+inxn_ref_language <- lm(interaction_num ~ gender,
+                 data = data_study_3)
+summary(inxn_ref_language)
+```
+
+```{r Gender Differences in Interaction Description: Professor}
+prof_ref_language <- lm(professor_num ~ gender,
+                 data = data_study_3)
+summary(prof_ref_language)
+```
+
+## STEM vs Non-STEM Majors
+
+```{r}
+data_major <- c(data_study_1$major, data_study_2$major, data_study_3$major)
+# write.csv(data_major, "major.csv")
+majors <- rio::import(here::here("major_code.csv"))
+majors$major_stem[is.na(majors$major_stem)] <- 1
+majors$major_stem <- factor(majors$major_stem, labels = c("Non-STEM", "STEM"))
+levels(majors$major_stem)
+data_full <- tibble(
+  study = c(rep(1, nrow(data_study_1)), 
+            rep(2, nrow(data_study_2)), 
+            rep(3, nrow(data_study_3))),
+  gender = c(data_study_1$gender, data_study_2$gender, data_study_3$gender),
+  social_belonging = c(data_study_1$social_belonging, data_study_2$social_belonging, data_study_3$social_belonging),
+  intellectual_belonging = c(data_study_1$intellectual_belonging, data_study_2$intellectual_belonging, data_study_3$intellectual_belonging),
+  interaction_perception = c(data_study_1$interaction_perception, data_study_2$interaction_perception, data_study_3$interaction_perception),
+  age = c(data_study_1$age, data_study_2$age, data_study_3$age) %>% as.numeric(),
+  major = majors$major_stem)
+
+data_full$gender <- forcats::fct_collapse(data_full$gender,
+                                          Women = c("Women", "Female"),
+                                          Men = c("Men", "Male"))
+stem_maj <- data_full %>% 
+  filter(as.numeric(data_full$major) > 1)
+```
+
+```{r STEM Interaction Perception}
+t.test(interaction_perception ~ major,
+         data = data_full %>%
+                    filter(study == 1))
+t.test(interaction_perception ~ major,
+         data = data_full %>%
+                    filter(study == 2))
+t.test(interaction_perception ~ major,
+         data = data_full %>%
+                    filter(study == 3))
+```
+
+```{r}
+t.test(social_belonging ~ major,
+         data = data_full %>%
+                    filter(study == 1))
+t.test(social_belonging ~ major,
+         data = data_full %>%
+                    filter(study == 2))
+t.test(social_belonging ~ major,
+         data = data_full %>%
+                    filter(study == 3))
+```
+
+```{r}
+t.test(intellectual_belonging ~ major,
+         data = data_full %>%
+                    filter(study == 1))
+t.test(intellectual_belonging ~ major,
+         data = data_full %>%
+                    filter(study == 2))
+t.test(intellectual_belonging ~ major,
+         data = data_full %>%
+                    filter(study == 3))
+```
+
+### Feedback Evaluation
+
+Gender
+
+```{r}
+major_gender <- lm(interaction_perception ~ gender + major,
+                data = data_full %>%
+                    filter(study == 1))
+summary(major_gender)
+major_gender <- lm(interaction_perception ~ gender + major,
+                data = data_full %>%
+                    filter(study == 2))
+summary(major_gender)
+major_gender <- lm(interaction_perception ~ gender + major,
+                data = data_full %>%
+                    filter(study == 3))
+summary(major_gender)
+```
+
+Social Belonging
+
+```{r}
+major_sb <- lm(interaction_perception ~ social_belonging + major,
+                data = data_full %>%
+                    filter(study == 1))
+summary(major_sb)
+major_sb <- lm(interaction_perception ~ social_belonging + major,
+                data = data_full %>%
+                    filter(study == 2))
+summary(major_sb)
+major_sb <- lm(interaction_perception ~ social_belonging + major,
+                data = data_full %>%
+                    filter(study == 3))
+summary(major_sb)
+```
+
+Intellectual Belonging
+
+```{r }
+major_ib <- lm(interaction_perception ~ intellectual_belonging + major,
+                data = data_full %>%
+                    filter(study == 1))
+summary(major_ib)
+major_ib <- lm(interaction_perception ~ intellectual_belonging + major,
+                data = data_full %>%
+                    filter(study == 2))
+summary(major_ib)
+major_ib <- lm(interaction_perception ~ intellectual_belonging + major,
+                data = data_full %>%
+                    filter(study == 3))
+summary(major_ib)
+```
+
+Collapsed across study
+
+```{r}
+pomp <- function(score) {
+  score_p  <- (score - min(score, na.rm = T)) / (max(score, na.rm = T) - min(score, na.rm = T)) 
+  #IF ERRROR: May need to na.rm = T
+  return (10 * score_p)
+}
+```
+
+```{r}
+interim <- data_full %>% 
+               filter(as.numeric(data_full$major) == 2) 
+interim <- split(interim, f = interim$study)
+interim <- lapply(interim, as_tibble)
+for(i in seq_along(interim)){
+         interim[[i]]$social_belonging_p = pomp(interim[[i]]$social_belonging)
+         interim[[i]]$intellectual_belonging_p = pomp(interim[[i]]$intellectual_belonging)
+         interim[[i]]$interaction_perception_p = pomp(interim[[i]]$interaction_perception)
+          
+}
+
+stem_data <- bind_rows(interim)
+ 
+stem_model <- lm(interaction_perception_p ~ gender + social_belonging_p + intellectual_belonging_p,
+     data = stem_data)
+
+summary(stem_model)
+sjPlot::plot_model(stem_model)
+```
+
+### T-Tests
+
+```{r}
+t.test(interaction_perception ~ stem_class,
+         data = data_study_3)
+
+t.test(intellectual_belonging ~ stem_class,
+         data = data_study_3)
+
+t.test(social_belonging ~ stem_class,
+         data = data_study_3)
+```
+
+### Models
+
+```{r}
+class_gender <- lm(interaction_perception ~ gender,
+                data = data_study_3 %>%
+                    filter(as.numeric(stem_class) == 2))
+summary(class_gender)
+```
+
+```{r}
+class_gender <- lm(interaction_perception ~ social_belonging,
+                data = data_study_3 %>%
+                    filter(as.numeric(stem_class) == 2))
+summary(class_gender)
+```
+
+```{r}
+class_gender <- lm(interaction_perception ~ intellectual_belonging,
+                data = data_study_3 %>%
+                    filter(as.numeric(stem_class) == 2))
+summary(class_gender)
+```
+
+```{r}
+class_gender <- lm(interaction_perception ~ stem_class,
+                data = data_study_3)
+summary(class_gender)
+```
+
+### Interaction Models
+
+```{r}
+class_gender <- lm(interaction_perception ~ stem_class * gender,
+                data = data_study_3)
+summary(class_gender)
+```
+
+```{r}
+class_gender <- lm(interaction_perception ~ social_belonging * gender,
+                data = data_study_3 %>%
+                    filter(as.numeric(stem_class) == 2))
+summary(class_gender)
+```
+
+```{r}
+class_gender <- lm(interaction_perception ~ intellectual_belonging * gender,
+                data = data_study_3 %>%
+                    filter(as.numeric(stem_class) == 2))
+summary(class_gender)
+```

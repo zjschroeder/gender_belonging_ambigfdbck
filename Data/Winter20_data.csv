@@ -1,0 +1,1022 @@
+RecordedDate,Q1.1,Q149,Q138,Q328_4_TEXT,Q328,Q1.3_17_TEXT,Q1.3,Q140,Q139,Q141,Q144,Q150,Q145_1,Q145_2,Q145_3,Q145_4,Q145_5,Q145_6,Q145_7,Q145_8,Q145_9,Q145_10,Q145_11,Q145_12,Q145_13,Q145_14,Q145_15,Q145_16,Q146_1,Q146_2,Q146_3,Q146_4,Q146_5,Q146_6,Q146_7,Q146_8,Q146_9,Q146_10,Q146_11,Q146_12,Q146_13,Q146_14,Q146_15,Q146_16,Q147,Q148,Gender,Age,Race,Race_8_TEXT
+Recorded Date,What is your age?,Please rate how positive or negative you believe your professor’s feedback was.,Please rate how confident you believe your professor is in your abilities.,What gender identity do you most identify with? - Prefer to self-describe - Text,What gender identity do you most identify with? - Selected Choice,"What is your ethnicity?  Please mark the one choice that describes the ethnic category with which you primarily identify. - Some other ethnicity or origin, please specify: - Text",What is your ethnicity?  Please mark the one choice that describes the ethnic category with which you primarily identify. - Selected Choice,How positive or negative do you feel after this interaction with your professor?,How encouraging would you rate this feedback?,"You have room for one more class in your schedule next quarter. After the meeting with your professor, which of the following classes are you most likely to choose to take next quarter?","If your major (or the major you are most seriously considering if you are undecided) had only 100 students, where would you rank your standing in the major?",How likely would you be to go back to this professor for further feedback?,"Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I feel that I belong to my major’s community.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I feel like an outsider in my major.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I feel accepted in my major.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I feel respected.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I feel disregarded.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I feel valued.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I feel neglected.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I feel excluded.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I feel like I fit in.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I feel comfortable.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I wish I could fade into the background and not be noticed.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I try to say as little as possible.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I enjoy being an active participant.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I wish I were invisible.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I trust the testing materials to be unbiased.","Please answer the following questions about your experience in your major generally, not in the context of the above scenario. - I have trust that I do not have to constantly prove myself.",Click to write the question text - I trust my instructors to be committed to helping me learn.,"Click to write the question text - Even when I do poorly, I trust my instructors to have faith in my potential.",Click to write the question text - I worry my abilities aren’t good enough to do well in my major.,Click to write the question text - I often wonder if I have what it takes to succeed in my major.,Click to write the question text - I feel confident about my abilities in my major.,Click to write the question text - I sometimes feel like other students in my major have skills that I don’t.,"Click to write the question text - When I’m doing work in my major, I feel a sense of competence.",Click to write the question text - My major requires some abilities that I’m not sure I possess.,"Click to write the question text - I worry that no matter how hard I try, I won’t be able to perform successfully in my major.","Click to write the question text - When doing work in my major, I feel I have the skills that I need.",Click to write the question text - I’m not sure that I’m cut out for my major.,Click to write the question text - I have no doubts that I possess or can acquire the abilities my major requires.,Click to write the question text - I feel similar to the kinds of people who have what it takes to succeed in my major.,Click to write the question text - I’m not certain I “fit in” intellectually in my major.,Click to write the question text - There are many people in my major I could go to for help on a homework assignment.,"Click to write the question text - I am similar to most of the students in my classes (e.g. race, gender, socio-economic status etc.)","What is your major (or intended major, if undeclared)?",Which best describes you?,What is your gender?,How old are you? (enter the number),What does your racial/ethnic heritage include?(check all that apply) - Selected Choice,What does your racial/ethnic heritage include?(check all that apply) - Other - Text
+"{""ImportId"":""recordedDate"",""timeZone"":""America/Denver""}","{""ImportId"":""QID222_TEXT""}","{""ImportId"":""QID250""}","{""ImportId"":""QID251""}","{""ImportId"":""QID223_4_TEXT""}","{""ImportId"":""QID223""}","{""ImportId"":""QID224_17_TEXT""}","{""ImportId"":""QID224""}","{""ImportId"":""QID253""}","{""ImportId"":""QID252""}","{""ImportId"":""QID254""}","{""ImportId"":""QID256""}","{""ImportId"":""QID255""}","{""ImportId"":""QID257_1""}","{""ImportId"":""QID257_2""}","{""ImportId"":""QID257_3""}","{""ImportId"":""QID257_4""}","{""ImportId"":""QID257_5""}","{""ImportId"":""QID257_6""}","{""ImportId"":""QID257_7""}","{""ImportId"":""QID257_8""}","{""ImportId"":""QID257_9""}","{""ImportId"":""QID257_10""}","{""ImportId"":""QID257_11""}","{""ImportId"":""QID257_12""}","{""ImportId"":""QID257_13""}","{""ImportId"":""QID257_14""}","{""ImportId"":""QID257_15""}","{""ImportId"":""QID257_16""}","{""ImportId"":""QID258_1""}","{""ImportId"":""QID258_2""}","{""ImportId"":""QID258_3""}","{""ImportId"":""QID258_4""}","{""ImportId"":""QID258_5""}","{""ImportId"":""QID258_6""}","{""ImportId"":""QID258_7""}","{""ImportId"":""QID258_8""}","{""ImportId"":""QID258_9""}","{""ImportId"":""QID258_10""}","{""ImportId"":""QID258_11""}","{""ImportId"":""QID258_12""}","{""ImportId"":""QID258_13""}","{""ImportId"":""QID258_14""}","{""ImportId"":""QID258_15""}","{""ImportId"":""QID258_16""}","{""ImportId"":""QID259_TEXT""}","{""ImportId"":""QID260""}","{""ImportId"":""QID32""}","{""ImportId"":""QID51_TEXT""}","{""ImportId"":""QID34""}","{""ImportId"":""QID34_8_TEXT""}"
+2020-01-07 14:18:44,18,"4
+Positive
+",4,,Female,,Black or African American,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,4,1,4,4,1,5,1,1,4,4,1,1,5,1,5,2,5,5,5,5,1,1,2,5,5,5,5,1,3,5,4,4,psychology,U.S. Student,Female,18,"African,Hispanic/Latino",
+2020-01-07 22:14:57,18,"2
+Negative
+",2,,Female,,White,"1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",5,1,5,5,1,5,1,1,5,5,5,2,4,1,5,5,4,3,1,1,5,4,5,2,1,5,1,5,5,1,4,4,Psychology,U.S. Student,Female,18,Caucasian,
+2020-01-08 12:38:45,19,"3
+Neutral
+","5
+Very Confident
+",,Male,,White,3,2,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"5
+Very likely
+",3,3,4,4,2,4,1,1,4,4,1,2,3,1,5,3,5,5,3,3,4,5,3,3,3,3,3,3,3,2,5,4,Biochemistry,U.S. Student,Male,19,Caucasian,
+2020-01-08 18:07:54,19,"2
+Negative
+",2,,Female,,Asian,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,5,1,5,5,1,5,1,1,5,5,1,1,1,5,5,5,5,5,1,1,5,3,5,1,1,5,1,5,5,1,5,4,family human services,U.S. Student,Female,19,Asian or Pacific Islander,
+2020-01-08 18:35:06,18,"2
+Negative
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the 30 worst students (70 other students are better than you),2,3,3,3,3,3,3,3,3,3,4,1,3,3,2,4,4,1,2,3,3,3,4,4,3,4,3,3,4,4,4,2,3,"General Social Science: Crime, Law, and Society",U.S. Student,Female,18,"Caucasian,Asian or Pacific Islander",
+2020-01-08 19:44:17,18,"4
+Positive
+",3,,Female,,White,3,3,An easy class not in your major.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,1,5,2,3,2,2,3,2,1,2,4,4,3,5,4,4,4,3,5,4,2,4,2,4,4,2,5,2,2,4,1,4,human physiology (im changing),U.S. Student,Female,18,Caucasian,
+2020-01-08 22:35:55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-01-08 23:01:23,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-01-08 23:05:19,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-01-09 12:18:48,20,"2
+Negative
+",2,,Female,,White,3,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,5,2,5,4,2,4,2,2,3,5,4,3,2,1,5,4,2,1,2,1,5,4,5,2,1,4,1,5,5,5,3,4,Human Physiology,U.S. Student,Female,20,Caucasian,
+2020-01-09 15:46:42,19,"3
+Neutral
+",3,,Male,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,3,3,3,2,2,2,4,2,3,3,1,2,4,1,4,1,5,4,2,2,4,5,4,2,4,4,3,4,3,3,2,4,Journalism,U.S. Student,Male,19,Caucasian,
+2020-01-09 16:43:36,18,"4
+Positive
+",3,,Female,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,2,3,3,2,4,2,2,4,4,3,1,4,1,4,3,4,3,4,4,4,1,5,2,1,5,1,4,5,2,4,3,public relations/journalism,U.S. Student,Female,18,Caucasian,
+2020-01-09 17:11:21,19,"3
+Neutral
+","1
+Not at all confident
+",,Female,,Black or African American,2,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",2,5,3,1,5,1,5,5,1,1,5,5,2,5,1,1,1,1,5,5,1,5,1,5,5,3,5,1,1,5,1,1,Psychology/biology,U.S. Student,Female,19,"African,Hispanic/Latino",
+2020-01-09 20:12:13,20,"2
+Negative
+",2,,Female,"MIXED, BLACK AND WHITE ","Some other ethnicity or origin, please specify:","1
+Very negative
+",4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),"1
+Very unlikely
+",5,1,5,4,2,4,1,3,3,3,1,2,5,1,2,1,5,4,4,2,4,2,4,2,4,4,1,2,4,1,5,1,LINGUISTICS,U.S. Student,Female,20,"Caucasian,African",
+2020-01-09 21:42:07,20,"4
+Positive
+",4,,Female,,White,4,"5
+Very Positive
+",A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,2,3,4,4,2,3,3,3,4,3,1,3,2,1,3,2,4,2,2,3,4,3,5,2,2,4,3,4,4,2,3,4,biochemistry,U.S. Student,Female,20,Caucasian,
+2020-01-10 14:28:27,20,"2
+Negative
+",2,,Female,,Asian,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,4,1,5,4,2,4,1,2,5,5,1,1,5,1,4,4,5,4,2,3,4,3,5,3,2,4,2,4,5,2,4,2,Family and Human Services,U.S. Student,Female,20,Asian or Pacific Islander,
+2020-01-10 15:21:48,,"2
+Negative
+",3,,Male,nop[e,"Some other ethnicity or origin, please specify:",3,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the 10 worst students (90 other students are better than you),2,3,2,3,2,3,2,3,4,3,2,3,2,3,2,2,3,2,3,2,3,4,3,2,3,4,3,3,4,3,2,3,3,psy,U.S. Student,Male,20,African,
+2020-01-10 17:14:58,19,"3
+Neutral
+",3,,Male,,Asian,2,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,4,2,4,3,3,3,3,3,3,3,2,2,4,1,4,4,4,3,2,1,3,4,3,2,1,3,2,4,4,2,4,3,Family and Human Services,U.S. Student,Male,19,Asian or Pacific Islander,
+2020-01-10 18:39:19,18,"2
+Negative
+",3,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),2,2,2,3,3,4,2,2,2,3,3,2,2,4,2,4,3,5,4,4,5,3,4,3,4,5,3,3,3,2,2,4,4,Human Physiology,U.S. Student,Female,18,Caucasian,
+2020-01-11 01:20:03,23,"3
+Neutral
+","5
+Very Confident
+",,Female,,Asian,"5
+Very Positive
+",4,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),"5
+Very likely
+",5,1,5,5,1,5,1,5,5,5,1,1,3,3,3,3,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,Music,U.S. Student,Female,23,Asian or Pacific Islander,
+2020-01-11 20:48:53,19,"3
+Neutral
+",3,,Female,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,2,4,4,2,4,2,4,4,5,2,2,3,2,4,3,4,4,5,5,2,5,3,4,5,3,5,1,4,3,4,5,human physiology,U.S. Student,Female,19,Caucasian,
+2020-01-12 19:58:00,20,"2
+Negative
+",3,,Male,,White,3,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,4,2,3,4,2,4,2,2,4,2,4,3,2,2,3,4,4,4,3,2,4,3,4,2,1,4,2,5,4,2,3,3,"Psychology ",U.S. Student,Male,20,Caucasian,
+2020-01-12 21:55:47,19,"2
+Negative
+",2,,Male,,White,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),2,3,3,3,4,2,3,2,2,3,4,3,3,3,3,4,4,4,3,2,2,4,2,4,3,2,3,2,4,4,2,2,3,Human Physiology,U.S. Student,Male,19,Caucasian,
+2020-01-12 21:57:04,21,"3
+Neutral
+",3,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 5 best students (Better than 95 other students),3,5,1,5,5,1,4,3,3,5,5,3,1,5,2,3,2,3,2,2,2,4,2,4,2,1,4,1,3,4,2,3,3,Philosophy,U.S. Student,Female,21,Caucasian,
+2020-01-13 01:39:14,18,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,Asian,2,"1
+Very encouraging
+",A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",,,,4,1,3,1,1,3,3,1,1,3,1,3,2,4,3,3,3,3,4,4,3,1,2,1,2,2,2,2,2,cinema studies,U.S. Student,Female,18,"Caucasian,Asian or Pacific Islander",
+2020-01-13 01:48:22,18,"3
+Neutral
+",3,,Female,Wasian - Scottish/English/American/Chinese,"Some other ethnicity or origin, please specify:",3,2,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"5
+Very likely
+",3,3,3,3,1,3,1,1,3,4,2,3,3,2,5,5,5,5,2,2,3,3,5,5,4,3,3,4,3,2,5,3,Psychology,U.S. Student,Female,18,"Caucasian,Asian or Pacific Islander",
+2020-01-13 16:17:35,19,"3
+Neutral
+",3,,Female,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,Exploring,U.S. Student,Female,19,Caucasian,
+2020-01-13 17:21:26,19,"2
+Negative
+","1
+Not at all confident
+",,Female,,White,"1
+Very negative
+",2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",5,2,4,4,2,4,2,2,4,4,2,2,4,1,4,4,4,2,3,3,4,4,4,2,2,4,2,4,4,2,4,3,Human Physiology,U.S. Student,Female,19,Caucasian,
+2020-01-13 20:34:45,20,"4
+Positive
+",3,,Female,,Asian,3,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,3,3,4,4,1,3,1,1,4,4,2,2,3,1,4,4,5,5,4,5,4,4,2,4,4,2,2,3,4,2,4,2,Communications Disorders and Sciences,U.S. Student,Female,20,Asian or Pacific Islander,
+2020-01-13 21:05:47,19,"5
+Very Positive
+",3,,Male,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 5 best students (Better than 95 other students),3,4,3,3,3,4,5,5,2,2,3,3,4,4,,2,1,3,3,4,3,3,2,4,4,5,5,2,3,3,4,3,3,Human Phys,U.S. Student,Male,19,Caucasian,
+2020-01-13 22:58:33,20,"2
+Negative
+",2,,Male,,White,"1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),"1
+Very unlikely
+",5,1,5,5,3,3,1,1,5,5,1,4,4,1,2,2,4,4,1,1,5,3,4,4,1,3,1,4,3,1,1,4,PSY,U.S. Student,Male,20,Caucasian,
+2020-01-14 10:31:55,19,"2
+Negative
+",3,,Female,,Asian,2,2,An easy class not in your major.,In the top 30 best students (Better than 70 other students),2,2,4,3,3,3,1,1,2,1,1,5,5,2,4,5,1,3,2,5,5,1,1,3,5,5,2,5,2,2,5,5,5,Human Physiology,U.S. Student,Female,19,"Caucasian,Asian or Pacific Islander",
+2020-01-14 15:41:07,18,"4
+Positive
+",3,,Female,,Middle Eastern or North African,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,4,2,3,4,2,3,2,2,4,4,2,3,4,1,2,2,4,3,2,4,4,3,4,2,3,5,1,5,4,1,3,4,Psychology,U.S. Student,Female,18,Arab,
+2020-01-14 16:01:32,19,"2
+Negative
+","1
+Not at all confident
+",,Female,,White,"1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,5,1,5,5,1,5,1,1,5,5,1,1,5,1,5,4,5,5,2,2,4,1,5,1,1,5,1,5,5,1,5,5,FHS,U.S. Student,Female,19,Caucasian,
+2020-01-14 18:21:34,26,"2
+Negative
+",3,,Female,,Asian,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,2,4,3,4,3,3,1,3,2,2,1,2,4,1,5,3,5,5,2,1,4,4,5,1,1,4,2,4,4,2,2,1,Computer Science,U.S. Student,,,,
+2020-01-14 18:50:11,18,"2
+Negative
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,2,4,3,3,3,2,2,4,4,2,4,4,2,4,3,4,3,3,2,3,4,4,3,2,4,2,3,4,2,3,4,"Psychology ",U.S. Student,Female,18,Caucasian,
+2020-01-14 21:22:08,19,"3
+Neutral
+",4,,Female,,"Hispanic, Latinx or Spanish Origin",4,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"5
+Very likely
+",4,1,4,5,1,4,1,1,4,3,3,2,4,1,4,3,4,3,1,3,4,3,4,4,2,4,1,3,4,2,2,4,Family and Human Services,U.S. Student,Female,19,Hispanic/Latino,
+2020-01-14 22:44:46,19,"3
+Neutral
+",3,,Female,,Asian,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,3,2,3,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,anthropology,International Student,Female,19,Asian or Pacific Islander,
+2020-01-15 16:50:46,23,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,Middle Eastern or North African,"1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",1,5,3,4,1,3,1,1,2,3,4,4,2,3,4,4,4,4,4,4,2,5,3,4,2,3,3,2,2,4,4,4,Human Physiology,U.S. Student,Female,23,"Asian or Pacific Islander,Arab",
+2020-01-15 18:27:05,19,"1
+Very Negative
+",2,,Female,,White,"1
+Very negative
+",2,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",5,1,5,5,1,5,1,1,5,4,2,3,4,1,5,1,4,4,5,5,2,5,5,5,5,5,4,3,2,5,5,4,Human Physiology,U.S. Student,Female,19,Caucasian,
+2020-01-16 12:09:30,20,"2
+Negative
+","1
+Not at all confident
+",,Female,,White,"1
+Very negative
+",2,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",3,2,4,4,2,4,2,2,4,4,2,3,3,2,3,3,3,4,3,3,3,3,3,2,2,4,2,4,4,2,4,4,psychology,U.S. Student,Female,20,Caucasian,
+2020-01-16 13:12:45,19,"2
+Negative
+",2,,Female,,White,2,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),"1
+Very unlikely
+",4,2,4,3,2,4,1,1,5,5,2,3,3,2,4,4,5,4,2,2,5,3,5,3,1,4,1,5,5,1,3,4,Education,U.S. Student,Female,19,Caucasian,
+2020-01-16 16:53:27,20,"3
+Neutral
+",2,,Female,,White,2,2,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),2,4,2,4,3,2,4,2,2,4,4,1,1,4,1,4,4,4,4,4,4,3,4,2,3,2,4,1,3,4,2,2,4,"Psychology  ",U.S. Student,Female,20,Caucasian,
+2020-01-17 13:56:21,18,"2
+Negative
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),3,4,2,4,3,1,3,1,1,4,4,3,2,4,3,4,4,4,3,2,2,4,2,4,2,2,4,2,4,4,2,3,4,Romance Languages,U.S. Student,Female,18,Caucasian,
+2020-01-17 14:05:56,20,"3
+Neutral
+",3,,Female,,White,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),4,4,1,4,4,1,4,1,1,4,5,1,1,5,1,5,5,5,5,1,1,5,4,5,1,1,5,1,1,5,5,5,5,"Human Physiology ",U.S. Student,,,,
+2020-01-17 14:48:09,19,"3
+Neutral
+",3,,Male,,White,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,1,5,5,1,5,1,1,4,4,1,1,4,1,4,4,5,5,2,3,4,3,3,2,1,4,1,4,4,1,5,4,"Human Physiology ",U.S. Student,Male,19,Caucasian,
+2020-01-18 01:56:52,18,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,Asian,"1
+Very negative
+",,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",3,4,4,3,2,3,2,2,2,3,4,4,1,4,4,2,4,4,4,4,3,4,3,3,2,3,3,3,2,4,3,2,Human Physiology,U.S. Student,Female,18,Asian or Pacific Islander,
+2020-01-20 15:31:37,20,"3
+Neutral
+",3,,Female,,Asian,4,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,3,2,4,4,2,3,2,2,4,4,2,2,4,2,4,3,4,3,2,4,3,3,4,4,2,3,3,4,4,3,4,3,"Psychology ",International Student,Female,20,Asian or Pacific Islander,
+2020-01-20 17:23:35,18,"3
+Neutral
+",2,,Female,,White,3,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),4,5,1,4,5,2,4,2,2,4,5,3,4,4,2,4,2,5,3,2,4,4,4,5,4,4,4,2,4,4,2,5,4,"Music Education ",U.S. Student,Female,18,Caucasian,
+2020-01-20 17:38:09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-01-20 20:13:52,18,"3
+Neutral
+",3,,Female,,White,3,2,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),2,4,2,4,4,2,4,2,2,4,4,2,2,4,2,4,4,4,4,3,3,3,4,3,3,2,4,2,4,4,2,4,4,Biology,U.S. Student,Female,18,Caucasian,
+2020-01-21 21:55:38,26,"2
+Negative
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",2,2,2,2,3,3,3,3,2,2,4,4,2,4,1,1,2,1,3,4,3,5,3,4,4,3,3,2,2,4,3,2,CIS,U.S. Student,Female,26,Caucasian,
+2020-01-21 21:59:02,19,"3
+Neutral
+",2,,Male,,Asian,3,3,An easy class not in your major.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,2,2,2,3,3,3,3,3,2,2,4,4,2,4,4,4,4,3,3,3,4,4,3,4,5,2,4,3,3,2,3,3,Business,U.S. Student,Male,19,Asian or Pacific Islander,
+2020-01-22 11:45:53,19,"2
+Negative
+",3,,Female,,White,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,5,1,5,5,1,5,1,1,5,5,1,1,3,1,5,4,5,5,1,2,5,1,5,3,1,4,1,4,4,1,3,3,Communication Disorders and Sciences,U.S. Student,Female,19,Caucasian,
+2020-01-22 14:02:33,18,"2
+Negative
+","1
+Not at all confident
+",,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),2,3,2,4,4,2,4,2,2,4,4,2,2,3,1,4,3,4,4,2,4,4,3,4,3,2,4,,4,4,2,4,4,Communication Disorders and Sciences,U.S. Student,Female,18,Caucasian,
+2020-01-22 17:01:54,18,"3
+Neutral
+",3,,Female,,Native Hawaiian or Other Pacific Islander,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,4,3,4,4,2,4,2,2,3,3,2,2,3,2,2,3,3,3,4,4,3,4,3,3,3,3,3,3,3,3,3,3,communication disorders,U.S. Student,Female,18,Asian or Pacific Islander,
+2020-01-22 17:30:13,18,"2
+Negative
+",2,,Female,,White,"1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),2,2,4,4,4,4,3,2,2,3,3,2,4,2,2,4,3,5,4,2,1,4,4,4,4,1,4,1,5,3,4,2,4,Psychology,U.S. Student,Female,18,"Caucasian,Native American,Hispanic/Latino",
+2020-01-22 17:34:20,19,"4
+Positive
+","5
+Very Confident
+",,Male,,"Hispanic, Latinx or Spanish Origin",4,4,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),4,5,1,5,5,1,5,1,1,5,5,2,1,3,1,5,5,5,5,1,2,5,3,5,1,1,5,1,5,5,1,4,4,Economics,U.S. Student,Male,19,"Caucasian,Hispanic/Latino",
+2020-01-22 17:37:57,19,"3
+Neutral
+",3,,Male,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,3,3,5,3,3,3,3,3,3,3,1,1,1,1,1,1,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,Business,U.S. Student,Male,19,Caucasian,
+2020-01-22 17:49:22,19,"4
+Positive
+",3,,Female,,"Hispanic, Latinx or Spanish Origin",4,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,4,2,4,4,2,4,1,1,4,4,3,4,2,3,3,4,4,3,3,4,3,5,4,3,1,3,2,3,3,3,3,2,"Psychology, Ethnic Studies",U.S. Student,Female,19,Hispanic/Latino,
+2020-01-22 18:02:25,21,"3
+Neutral
+",2,,Non-binary,,White,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"5
+Very likely
+",5,1,5,4,1,4,1,1,5,5,1,1,4,1,3,3,5,5,2,4,4,3,4,2,2,5,1,5,5,1,4,2,Art & Technology,U.S. Student,Not listed here,21,Caucasian,
+2020-01-22 18:13:23,19,"3
+Neutral
+","1
+Not at all confident
+",,Female,,White,2,3,An easy class not in your major.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,4,2,4,3,2,2,2,2,3,3,4,4,2,3,3,3,5,4,3,3,4,5,3,3,3,3,3,3,3,3,4,2,"Journalism ",U.S. Student,Female,19,Caucasian,
+2020-01-22 23:39:00,21,"3
+Neutral
+",3,,Female,,White,2,,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),2,4,2,4,3,2,4,2,2,4,3,3,3,5,2,3,4,3,3,3,4,4,4,4,3,3,4,2,3,4,2,2,3,psychology,U.S. Student,Female,21,Caucasian,
+2020-01-23 06:57:24,20,"4
+Positive
+",4,,Male,,Asian,3,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,4,4,3,4,2,4,2,2,3,4,3,4,3,2,4,4,4,4,4,4,3,4,3,4,4,3,4,3,3,3,3,3,human phys,U.S. Student,Male,20,Asian or Pacific Islander,
+2020-01-23 11:44:27,19,"2
+Negative
+",2,,Female,,"Hispanic, Latinx or Spanish Origin",2,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),3,4,2,4,4,3,3,3,3,3,4,3,4,3,3,3,4,3,3,2,2,4,3,4,3,3,4,2,4,4,3,2,4,psych,U.S. Student,Female,19,Hispanic/Latino,
+2020-01-23 13:53:34,18,"3
+Neutral
+",3,,Male,,"Hispanic, Latinx or Spanish Origin",3,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,1,3,4,1,4,1,1,3,4,1,2,2,1,4,4,5,4,1,1,4,2,3,1,1,3,1,5,2,2,3,2,Psychology,U.S. Student,Male,18,Hispanic/Latino,
+2020-01-23 14:37:32,18,"2
+Negative
+",2,,Female,,"Hispanic, Latinx or Spanish Origin",2,2,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,3,2,3,3,4,2,3,4,3,3,3,4,3,3,3,3,4,3,5,5,5,5,3,5,4,3,4,3,2,3,3,2,general science,U.S. Student,Female,18,Hispanic/Latino,
+2020-01-23 18:12:17,18,"2
+Negative
+",2,,Female,,White,3,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",4,1,4,4,1,3,1,1,4,3,2,3,4,1,4,4,4,4,2,2,4,3,4,3,1,4,1,4,4,2,2,4,Pre-education,U.S. Student,Female,18,Caucasian,
+2020-01-23 20:59:37,19,"3
+Neutral
+",4,,Female,,White,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,4,3,4,4,2,4,2,2,4,4,3,4,3,2,4,2,4,2,5,5,2,3,3,4,4,3,4,2,3,3,3,4,Biology,U.S. Student,Female,19,Caucasian,
+2020-01-23 23:47:14,19,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,White,3,"1
+Very encouraging
+",A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",4,2,4,4,1,5,1,1,4,4,3,3,3,3,4,2,5,5,4,4,2,3,4,3,2,4,4,3,4,2,2,4,"Psychology ",U.S. Student,Female,19,Caucasian,
+2020-01-27 18:33:13,19,"3
+Neutral
+",3,,Male,,Native Hawaiian or Other Pacific Islander,3,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"5
+Very likely
+",3,2,2,4,3,3,3,3,4,4,2,1,4,1,5,5,5,5,4,4,4,4,4,3,2,4,2,4,4,3,4,5,History,U.S. Student,Male,19,Caucasian,
+2020-01-27 20:35:16,18,"2
+Negative
+","1
+Not at all confident
+",,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",3,2,3,3,2,3,2,2,4,4,3,2,4,2,2,3,4,2,3,3,3,4,3,4,4,3,4,4,4,5,3,2,Pyschology,U.S. Student,Female,18,"Caucasian,Asian or Pacific Islander",
+2020-01-27 23:10:41,25,"2
+Negative
+",2,,Female,,White,2,2,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 10 best students (Better than 90 other students),"1
+Very unlikely
+",4,1,4,4,1,5,1,1,5,5,2,3,3,2,3,3,4,3,4,4,3,4,4,3,2,4,2,3,4,2,4,4,Sociology,U.S. Student,Female,25,Caucasian,
+2020-01-28 15:25:33,19,"3
+Neutral
+",2,,Male,,White,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),2,5,1,5,5,1,5,1,1,5,5,1,2,5,1,4,1,5,5,1,1,5,4,3,2,1,4,1,5,4,1,5,4,Advertising,U.S. Student,Male,19,Caucasian,
+2020-01-28 15:46:50,20,"4
+Positive
+",3,,Female,,Asian,3,3,An easy class not in your major.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,3,4,4,2,3,2,2,4,4,3,3,3,3,3,3,4,4,4,4,3,4,3,4,3,4,2,3,3,3,3,3,Public relations,U.S. Student,Female,20,Asian or Pacific Islander,
+2020-01-28 16:25:19,19,"4
+Positive
+",3,,Male,,"Hispanic, Latinx or Spanish Origin",4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the 10 worst students (90 other students are better than you),4,5,1,5,4,1,4,1,1,4,4,4,4,1,,4,4,4,2,1,4,3,3,2,3,4,2,4,4,3,3,4,3,PPPM,U.S. Student,Male,19,Hispanic/Latino,
+2020-01-29 00:48:42,18,"4
+Positive
+","5
+Very Confident
+",,Female,,White,"5
+Very Positive
+","5
+Very Positive
+",A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,4,4,4,4,3,4,2,2,3,3,4,3,3,3,4,4,5,5,5,5,4,4,4,4,4,3,3,3,3,3,5,2,sociology,U.S. Student,Female,19,Caucasian,
+2020-01-29 15:55:23,18,"3
+Neutral
+",4,,Female,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,3,4,3,3,3,3,2,2,3,3,3,2,3,2,3,3,5,3,4,5,3,4,3,4,4,3,4,2,4,3,4,4,Psychology,U.S. Student,Female,18,Caucasian,
+2020-01-29 17:35:16,19,"3
+Neutral
+",4,,Female,,White,4,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,4,2,4,4,2,4,2,2,3,,2,3,4,2,4,3,4,3,2,3,4,3,4,3,2,4,2,3,4,2,3,4,Psychology,U.S. Student,Female,19,Caucasian,
+2020-01-29 17:41:38,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-01-29 18:52:55,18,"4
+Positive
+",4,,Male,,Asian,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,3,4,4,4,4,3,4,3,4,4,2,3,3,3,4,1,2,English,U.S. Student,Male,18,Asian or Pacific Islander,
+2020-01-29 21:22:52,20,"3
+Neutral
+",3,,Male,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,1,1,4,2,4,2,2,4,2,4,4,3,2,2,General Social Sciences,U.S. Student,Male,20,Caucasian,
+2020-01-29 22:25:23,19,"3
+Neutral
+",4,,Female,,Asian,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,1,3,3,3,1,1,1,1,1,2,1,3,2,1,3,2,3,4,4,4,3,4,3,4,3,3,3,3,3,3,3,3,Psychology,U.S. Student,Female,19,Asian or Pacific Islander,
+2020-01-29 23:50:47,23,"4
+Positive
+",4,,Male,,White,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,psy,International Student,Male,23,Native American,
+2020-01-30 00:03:05,20,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,"Hispanic, Latinx or Spanish Origin","1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",3,4,4,4,2,3,2,2,3,4,3,4,2,2,1,2,5,4,5,5,3,5,4,2,5,2,4,4,3,4,5,3,"psychology ",U.S. Student,Female,20,Hispanic/Latino,
+2020-01-30 01:53:56,19,"2
+Negative
+",2,,Female,"1/2 filipina, 1/4 japanese, 1/4 white","Some other ethnicity or origin, please specify:",2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),2,2,2,2,2,2,2,2,2,2,3,1,2,2,1,1,4,4,3,4,4,3,2,4,4,4,3,4,2,3,4,1,1,"PPPM, Public policy, planning, management",U.S. Student,Female,19,"Caucasian,Asian or Pacific Islander",
+2020-01-30 11:37:47,20,"3
+Neutral
+",2,,Female,,I prefer not to answer.,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",2,3,3,3,5,3,3,3,3,3,5,5,1,4,3,4,1,1,4,4,3,4,4,2,4,5,3,2,2,3,2,2,Computer Science,U.S. Student,Female,20,Caucasian,
+2020-01-30 12:01:41,18,"2
+Negative
+",2,,Female,,Native Hawaiian or Other Pacific Islander,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",5,1,5,5,1,5,1,1,4,,1,1,3,1,2,2,5,5,5,5,3,5,3,3,5,5,2,1,5,2,5,3,"Psychology and Family Human Services ",U.S. Student,Female,18,"Caucasian,Asian or Pacific Islander",
+2020-01-30 15:21:06,19,"2
+Negative
+","1
+Not at all confident
+",,Male,,Black or African American,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",2,4,2,3,4,3,3,4,2,2,1,5,2,1,4,2,4,2,2,3,3,5,3,4,1,3,3,4,2,4,3,1,Business,U.S. Student,Male,19,"African,Other",African American/Black
+2020-01-30 15:32:38,18,"2
+Negative
+",2,,Female,,White,"1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",2,2,3,3,4,3,2,2,4,4,2,3,4,2,4,4,4,4,2,2,4,4,3,2,2,4,2,4,4,3,2,4,Psychology,U.S. Student,Female,18,Caucasian,
+2020-01-30 17:44:41,18,"3
+Neutral
+",2,,Female,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the 30 worst students (70 other students are better than you),2,4,2,3,3,1,2,2,2,4,4,3,4,2,2,4,4,2,2,2,4,3,4,4,2,4,4,2,2,3,4,4,2,Psychology,U.S. Student,Female,18,Caucasian,
+2020-01-30 18:18:18,19,"3
+Neutral
+",3,,Male,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 5 best students (Better than 95 other students),4,3,2,4,4,2,4,2,2,3,4,1,1,4,,4,2,4,2,3,2,2,3,2,3,3,2,3,3,3,3,2,2,"Psychology ",U.S. Student,Male,19,Caucasian,
+2020-01-31 02:37:40,19,"3
+Neutral
+",2,,Female,,Asian,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,2,4,2,2,4,2,4,4,2,2,3,3,4,2,3,4,3,3,5,5,3,5,3,5,4,2,4,3,2,4,2,2,Business,U.S. Student,Female,19,Asian or Pacific Islander,
+2020-01-31 12:31:57,19,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,Black or African American,2,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",3,1,3,4,1,3,1,4,4,4,1,2,2,1,4,4,5,4,2,4,4,1,4,2,1,4,1,4,3,2,2,1,"Journalism ",U.S. Student,Female,19,African,
+2020-02-01 12:59:22,22,"3
+Neutral
+",3,,Female,,Asian,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,3,4,3,4,3,3,2,4,2,2,2,2,4,2,4,1,4,4,5,5,2,5,2,5,5,2,5,2,2,5,3,2,"Linguistics, Spanish",U.S. Student,Female,22,"Caucasian,Asian or Pacific Islander",
+2020-02-01 16:55:05,19,"3
+Neutral
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,3,3,3,2,4,2,3,2,2,2,3,5,3,3,4,4,2,2,2,4,3,5,2,4,4,3,4,3,3,4,4,3,psych???,U.S. Student,Female,19,Caucasian,
+2020-02-02 15:42:59,18,"2
+Negative
+",2,,Female,,White,2,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",2,4,2,4,2,4,2,4,2,4,2,4,2,2,2,2,4,2,4,4,2,4,2,4,4,2,4,2,2,3,2,3,law,U.S. Student,Female,18,Caucasian,
+2020-02-02 17:01:27,21,"3
+Neutral
+","5
+Very Confident
+",,Female,,"Hispanic, Latinx or Spanish Origin",4,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,4,1,3,5,1,2,1,1,4,5,1,3,2,1,5,5,5,4,1,1,4,2,4,2,2,4,2,4,4,1,4,2,Psychology,U.S. Student,Female,21,Hispanic/Latino,
+2020-02-02 17:04:11,19,"3
+Neutral
+",2,,Male,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,2,5,3,4,2,3,2,2,2,3,2,4,1,3,4,2,3,4,2,4,4,3,3,2,1,3,4,2,1,4,1,3,General Music/Computer Science,U.S. Student,Male,19,Caucasian,
+2020-02-02 20:41:24,19,"3
+Neutral
+",4,,Female,,"Hispanic, Latinx or Spanish Origin",3,"5
+Very Positive
+",A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,3,2,3,4,2,4,1,1,4,4,1,1,5,1,1,3,5,3,4,5,5,1,4,3,4,2,2,2,1,1,4,2,biology,U.S. Student,Female,19,"Caucasian,Hispanic/Latino",
+2020-02-02 21:45:59,20,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,White,"1
+Very negative
+",2,An easy class in your major that doesn’t cover many new skills or much new material.,In the 30 worst students (70 other students are better than you),"1
+Very unlikely
+",3,2,3,3,1,3,1,1,3,3,1,1,3,1,3,3,5,3,5,5,1,5,3,5,5,1,3,5,3,1,1,2,"cultural anthropology ",U.S. Student,Female,20,Caucasian,
+2020-02-03 00:48:27,19,"4
+Positive
+",3,,Female,,American Indian or Alaska Native,3,4,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),4,4,2,4,4,2,4,2,1,4,4,3,3,4,2,4,3,4,4,4,2,4,3,4,3,3,4,2,4,5,2,4,2,Psychology,U.S. Student,Female,19,Native American,
+2020-02-03 02:02:11,19,"2
+Negative
+",3,,Female,,"Hispanic, Latinx or Spanish Origin",2,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,3,2,4,4,2,4,2,2,4,4,2,2,3,2,4,2,4,4,2,2,4,2,4,2,2,4,2,4,4,3,2,2,"psychology ",U.S. Student,Female,19,Hispanic/Latino,
+2020-02-03 10:39:58,19,"3
+Neutral
+",3,,Female,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,3,2,3,4,2,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,3,4,4,3,3,3,2,3,3,3,2,2,Human Physiology,U.S. Student,Female,19,Caucasian,
+2020-02-03 17:25:12,20,"3
+Neutral
+",4,,Female,,White,3,4,An easy class not in your major.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,2,4,4,2,4,2,2,4,4,2,2,3,1,4,3,3,3,3,3,4,2,3,2,2,4,2,4,4,2,4,4,psychology,U.S. Student,Female,20,Caucasian,
+2020-02-03 18:29:50,18,"4
+Positive
+",4,,Female,,White,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,4,2,4,4,2,3,2,2,4,4,1,1,5,1,5,5,4,4,4,4,3,3,4,2,3,3,2,3,4,5,4,4,Psychology,U.S. Student,Female,18,Caucasian,
+2020-02-03 19:22:51,18,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,White,"1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",3,3,5,5,1,5,1,1,5,5,1,2,4,1,5,5,5,5,5,5,5,5,5,3,1,5,1,5,5,1,5,5,Psychology,U.S. Student,Female,18,Caucasian,
+2020-02-03 21:21:57,22,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,White,"1
+Very negative
+",2,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",5,1,4,5,1,4,1,1,3,4,4,4,1,1,4,3,5,5,3,3,4,3,4,2,3,4,1,5,4,1,4,3,"Human Physiology ",U.S. Student,Female,22,Caucasian,
+2020-02-03 22:02:23,19,"2
+Negative
+","1
+Not at all confident
+",,Female,,White,"1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",3,3,2,2,4,2,4,4,2,2,4,4,2,4,2,2,3,2,4,4,2,4,2,4,4,2,4,2,2,4,2,4,economics,U.S. Student,Female,19,Caucasian,
+2020-02-03 23:48:03,20,"4
+Positive
+",4,,Male,,Native Hawaiian or Other Pacific Islander,4,"5
+Very Positive
+",A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"5
+Very likely
+",4,3,5,5,1,5,1,1,5,4,2,1,5,2,4,3,4,3,3,3,3,4,3,3,2,4,3,3,3,2,4,3,"General social science ",U.S. Student,Male,20,Asian or Pacific Islander,
+2020-02-04 03:53:16,19,"2
+Negative
+",3,,Male,,American Indian or Alaska Native,2,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,2,2,2,2,4,4,4,2,2,2,4,4,2,4,3,4,3,2,4,4,3,5,4,4,4,2,4,3,2,3,3,2,human physiology,U.S. Student,Male,19,"Caucasian,Asian or Pacific Islander,Native American",
+2020-02-04 13:27:57,18,"3
+Neutral
+",2,,Female,,White,2,2,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,3,2,3,3,2,3,2,2,3,3,2,3,3,2,4,3,4,3,4,4,3,4,3,3,4,3,4,3,3,4,3,3,Psychology,U.S. Student,Female,18,Caucasian,
+2020-02-04 15:52:46,18,"2
+Negative
+","1
+Not at all confident
+",,Male,,White,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",5,1,5,5,1,4,,1,5,5,1,4,4,1,1,2,1,3,3,3,5,2,4,4,1,4,2,5,4,1,4,4,Business Admin,U.S. Student,Male,18,Caucasian,
+2020-02-04 17:26:21,21,"2
+Negative
+",2,,Female,,White,2,2,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,2,4,2,2,4,2,3,4,3,3,4,4,2,4,4,1,2,3,5,5,2,5,2,5,5,2,5,2,1,4,2,5,Communications disorders and sciences,U.S. Student,Female,21,Caucasian,
+2020-02-04 18:29:37,19,"3
+Neutral
+",3,,Female,,"Hispanic, Latinx or Spanish Origin",3,3,An easy class not in your major.,In the top 30 best students (Better than 70 other students),3,3,3,2,2,2,2,1,2,2,2,2,2,4,2,2,2,4,4,3,4,4,4,4,4,2,3,3,3,3,3,3,3,political science,U.S. Student,Female,19,Hispanic/Latino,
+2020-02-04 18:44:14,19,"1
+Very Negative
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,5,1,5,5,1,5,1,1,5,5,2,2,1,1,4,4,4,4,1,2,4,2,5,2,2,4,1,4,4,1,4,4,Psychology,U.S. Student,Female,19,"Caucasian,Asian or Pacific Islander",
+2020-02-04 19:04:48,18,"2
+Negative
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",1,5,2,2,4,2,4,4,4,2,1,3,4,2,3,2,3,3,3,3,3,4,3,3,4,4,2,4,2,3,1,2,Product Design,U.S. Student,Female,18,Caucasian,
+2020-02-04 20:30:32,19,"2
+Negative
+",2,,Female,,White,3,"1
+Very encouraging
+",A difficult class in your major that is well known for making students more successful after they graduate.,In the 30 worst students (70 other students are better than you),3,5,4,4,4,4,3,3,3,4,3,2,2,4,1,4,2,2,3,4,5,3,5,3,3,5,4,3,4,3,3,5,5,JOURNALISM,U.S. Student,Female,19,Caucasian,
+2020-02-04 21:23:19,23,"2
+Negative
+","1
+Not at all confident
+",,Male,,White,2,2,An easy class in your major that doesn’t cover many new skills or much new material.,In the 10 worst students (90 other students are better than you),"1
+Very unlikely
+",2,4,2,2,4,4,2,4,2,2,5,5,4,4,2,1,2,1,4,5,2,4,4,5,4,2,2,2,2,4,1,2,Computer Science,U.S. Student,Male,23,Caucasian,
+2020-02-05 09:56:37,20,"4
+Positive
+",3,,Male,,Asian,3,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,5,1,4,4,1,4,1,4,4,4,2,2,4,2,2,1,5,5,2,5,5,3,5,4,2,3,1,3,4,1,4,2,Psychology,U.S. Student,Male,20,Asian or Pacific Islander,
+2020-02-05 12:38:37,18,"2
+Negative
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,4,1,4,4,1,3,1,1,4,4,1,2,3,1,4,2,5,4,3,3,4,3,4,2,2,4,2,5,4,3,4,3,psychology,U.S. Student,Female,18,Caucasian,
+2020-02-05 13:24:04,18,"3
+Neutral
+",3,,Male,,"Hispanic, Latinx or Spanish Origin",2,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,3,4,3,3,1,3,1,1,3,3,2,2,3,2,5,3,4,3,3,3,3,4,3,3,3,2,3,4,3,3,3,2,Music Technology,U.S. Student,Male,18,Hispanic/Latino,
+2020-02-05 16:16:51,18,"4
+Positive
+",4,,Female,,White,4,4,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,4,3,3,4,3,3,1,1,4,4,2,2,4,2,4,4,4,3,4,2,4,2,3,,4,5,2,4,2,3,3,3,Child Education,U.S. Student,Female,18,Caucasian,
+2020-02-05 18:47:58,19,"3
+Neutral
+",3,,Female,,White,3,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),4,5,1,5,5,1,5,1,1,5,5,1,1,5,1,5,2,5,5,4,2,4,2,5,2,2,5,1,4,4,1,5,4,Biology,U.S. Student,Female,19,Caucasian,
+2020-02-05 20:33:29,19,"3
+Neutral
+",3,,Male,,White,2,2,An easy class not in your major.,In the top 30 best students (Better than 70 other students),2,3,3,3,3,4,2,3,3,3,3,2,2,4,1,2,2,2,3,4,4,3,3,3,3,2,3,3,2,4,2,5,4,Business,U.S. Student,Male,19,Caucasian,
+2020-02-05 21:57:53,19,"4
+Positive
+",4,,Female,,"Hispanic, Latinx or Spanish Origin",4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),3,4,3,4,4,2,4,2,2,3,4,2,1,4,1,4,3,4,4,5,5,3,5,5,3,4,4,4,4,3,3,4,4,Human Physiology,U.S. Student,Female,19,Hispanic/Latino,
+2020-02-05 22:27:00,19,"4
+Positive
+",4,,Male,,American Indian or Alaska Native,3,4,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 5 best students (Better than 95 other students),4,2,4,3,4,3,2,2,3,3,3,2,2,3,2,2,5,4,4,3,4,4,3,3,2,2,2,2,4,4,3,3,2,Business,U.S. Student,Male,19,Native American,
+2020-02-06 01:37:33,20,"3
+Neutral
+",4,,Male,,Asian,"5
+Very Positive
+",2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,3,2,4,4,2,3,2,4,4,4,2,3,3,1,5,2,3,3,2,4,4,3,4,3,1,4,2,3,3,3,3,3,Economics,International Student,Male,20,Asian or Pacific Islander,
+2020-02-06 02:43:18,19,"2
+Negative
+",3,,Female,,White,2,2,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,2,4,4,2,4,2,2,4,4,2,2,4,2,4,3,4,4,3,3,4,2,4,3,2,4,2,4,4,3,4,4,Communication Disorders and Sciences,U.S. Student,Female,19,"Caucasian,Hispanic/Latino",
+2020-02-06 11:55:02,20,"3
+Neutral
+",3,,Male,,"Hispanic, Latinx or Spanish Origin",3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the 30 worst students (70 other students are better than you),3,3,4,4,1,1,2,3,3,3,4,1,3,4,1,1,1,2,2,5,4,3,4,2,3,5,3,1,3,3,3,3,3,Psychology,U.S. Student,Male,20,"Native American,Hispanic/Latino",
+2020-02-06 12:00:36,19,"3
+Neutral
+",3,,Male,,White,2,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,4,3,3,3,3,3,2,2,3,3,2,2,4,1,2,4,4,4,2,2,4,4,4,3,3,3,2,4,4,2,4,4,psychology,U.S. Student,Male,19,Caucasian,
+2020-02-06 12:23:58,18,"3
+Neutral
+",2,,Male,,White,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,3,2,4,4,1,3,4,4,3,2,2,3,4,2,4,3,5,3,4,4,2,4,4,3,4,4,2,3,3,2,4,4,Biochemistry,U.S. Student,Male,18,Caucasian,
+2020-02-06 13:24:17,19,"3
+Neutral
+",3,,Female,,Black or African American,3,2,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),2,5,1,5,5,1,4,1,1,4,4,1,2,5,1,5,3,3,3,4,5,3,3,5,2,2,4,3,4,4,1,2,1,"Public Relations ",U.S. Student,Female,19,African,
+2020-02-06 14:26:27,19,"2
+Negative
+",2,,Female,,White,2,2,An easy class not in your major.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",2,2,2,2,2,2,2,2,3,4,1,2,3,2,4,4,3,1,2,3,3,3,1,2,4,3,2,2,2,2,1,2,Public Relations,U.S. Student,Female,19,Caucasian,
+2020-02-06 15:51:02,18,"4
+Positive
+",4,,Male,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,4,3,4,2,3,3,3,4,5,5,4,3,3,4,3,2,4,4,2,4,3,4,4,3,3,4,2,4,4,3,4,4,"Psychology ",U.S. Student,Male,18,Caucasian,
+2020-02-06 16:19:53,19,"3
+Neutral
+",3,,Male,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,2,3,4,4,2,4,2,2,4,4,2,2,4,2,5,3,5,4,3,2,4,3,3,2,1,4,1,4,4,1,3,3,Business,U.S. Student,Male,19,Caucasian,
+2020-02-06 17:09:44,19,"2
+Negative
+",3,,Male,,White,3,2,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,4,2,3,2,3,2,4,4,2,2,3,4,2,2,4,2,3,2,3,2,3,4,3,5,2,2,5,2,2,2,2,4,Journalism,U.S. Student,Male,19,Caucasian,
+2020-02-06 18:26:19,18,"4
+Positive
+",3,,Male,,White,,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,3,2,3,3,2,4,2,2,1,4,2,3,3,1,2,3,3,3,4,3,2,3,2,3,4,3,1,2,3,2,3,4,Business,U.S. Student,Male,18,Caucasian,
+2020-02-06 19:01:31,18,"2
+Negative
+",4,,Female,,"Hispanic, Latinx or Spanish Origin","1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,4,1,3,3,1,3,1,1,4,5,2,3,3,1,5,4,5,5,4,5,4,3,3,3,2,4,1,4,4,1,5,3,Business Administration,U.S. Student,Female,18,Hispanic/Latino,
+2020-02-06 19:06:46,26,"3
+Neutral
+","5
+Very Confident
+",,Male,,Black or African American,"5
+Very Positive
+","1
+Very encouraging
+",A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"5
+Very likely
+",4,2,4,4,1,4,1,1,4,4,1,1,4,1,3,4,4,4,1,1,5,2,,1,1,3,1,4,4,1,4,1,Psychology + Biology,U.S. Student,Male,26,African,
+2020-02-06 19:59:38,18,"3
+Neutral
+","5
+Very Confident
+",,Female,,White,2,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,3,2,4,4,2,4,2,2,3,3,2,3,3,1,4,4,5,5,3,4,3,5,3,3,2,3,2,4,4,2,4,3,business,U.S. Student,Female,18,Caucasian,
+2020-02-06 20:04:07,18,"4
+Positive
+",4,,Female,,Middle Eastern or North African,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,4,2,4,4,2,4,2,2,4,4,2,2,4,2,4,4,4,4,3,3,4,3,3,3,3,4,2,4,4,2,4,4,Psychology,U.S. Student,Female,18,Other,Persian
+2020-02-06 20:49:20,19,"3
+Neutral
+",4,,Male,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,4,2,4,4,2,4,2,2,4,5,1,1,5,,4,3,5,4,3,4,4,4,4,3,2,3,4,2,3,2,4,5,Business,U.S. Student,Male,19,Caucasian,
+2020-02-06 20:49:58,19,"4
+Positive
+",3,,Female,,Asian,2,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,4,3,4,4,3,3,3,4,4,4,4,4,3,3,3,4,4,4,5,5,4,4,4,4,3,4,3,3,4,4,5,2,architecture,U.S. Student,Female,10,Asian or Pacific Islander,
+2020-02-06 20:51:23,19,"3
+Neutral
+",4,,Male,,White,3,2,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,5,2,4,4,1,4,1,1,5,5,1,2,4,1,4,3,5,5,1,4,4,4,5,2,2,4,2,5,4,2,4,3,Linguistics,U.S. Student,Male,19,Caucasian,
+2020-02-06 21:30:01,22,"4
+Positive
+",3,,Female,,"Hispanic, Latinx or Spanish Origin",4,4,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,3,4,3,5,2,4,1,3,2,5,3,4,1,3,4,3,5,5,3,5,3,4,4,4,4,3,3,3,4,3,4,1,Human Physiology,U.S. Student,Female,22,Hispanic/Latino,
+2020-02-06 22:10:13,20,"4
+Positive
+",4,,Male,,White,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,3,3,3,3,3,3,3,3,4,4,2,2,4,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,3,3,Communications,U.S. Student,Male,20,Caucasian,
+2020-02-06 22:15:40,18,"3
+Neutral
+",4,,Female,,White,3,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,4,1,4,4,1,4,1,1,4,4,1,3,1,1,3,1,4,4,4,1,4,1,4,1,4,1,4,1,4,1,4,1,Business,U.S. Student,Female,18,Caucasian,
+2020-02-07 02:06:20,18,"2
+Negative
+",3,,Female,,White,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,4,4,3,4,3,4,3,3,4,3,1,3,4,1,3,3,4,3,3,2,3,2,3,3,2,2,2,2,3,2,2,3,English on a pre-law track,U.S. Student,Female,18,Hispanic/Latino,
+2020-02-07 14:26:46,19,"2
+Negative
+",2,,Male,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,3,3,4,3,3,3,3,3,3,4,2,2,5,2,4,4,4,4,4,4,2,4,3,3,4,3,3,4,3,3,3,2,Family and human services,U.S. Student,Male,19,Caucasian,
+2020-02-07 14:29:38,18,"2
+Negative
+","1
+Not at all confident
+",,Male,,Black or African American,"1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),2,3,4,2,3,2,4,3,2,4,4,3,3,3,3,4,4,4,4,4,4,3,4,3,4,4,4,4,4,3,4,3,1,Political Science,U.S. Student,Male,18,African,
+2020-02-07 14:43:41,19,"4
+Positive
+",4,,Male,,Asian,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,3,3,3,4,2,3,2,2,3,4,2,3,2,2,4,3,3,4,4,4,3,4,3,4,4,3,3,3,3,4,4,2,journalism,U.S. Student,Male,19,"Caucasian,Asian or Pacific Islander",
+2020-02-07 14:54:54,20,"3
+Neutral
+",3,,Male,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,human phys,U.S. Student,Male,20,Caucasian,
+2020-02-07 15:26:09,20,"2
+Negative
+",2,,Male,,White,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),2,4,2,4,4,2,4,1,1,4,4,1,1,5,1,4,4,4,4,2,1,4,3,4,3,1,4,1,5,4,1,4,4,"Linguistics ",U.S. Student,Male,20,"Caucasian,Hispanic/Latino",
+2020-02-07 16:46:24,21,"2
+Negative
+","1
+Not at all confident
+",,Female,,White,"1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,In the 30 worst students (70 other students are better than you),2,2,5,4,4,4,1,5,5,1,1,5,5,2,5,3,1,2,2,3,4,2,5,1,4,4,2,4,2,2,4,4,4,Music,U.S. Student,Female,21,Caucasian,
+2020-02-07 18:45:23,18,"3
+Neutral
+",3,,Male,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,4,2,4,4,2,4,1,2,4,5,1,1,5,1,3,3,4,4,4,4,3,3,3,3,3,4,2,3,4,2,2,3,Computer Science,U.S. Student,Male,18,Caucasian,
+2020-02-07 19:16:32,19,"3
+Neutral
+",4,,Male,,"Hispanic, Latinx or Spanish Origin",2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,3,4,3,3,4,2,4,4,2,2,3,4,3,1,3,3,3,2,4,4,4,4,4,4,4,3,3,2,3,3,2,4,Journalism,U.S. Student,Male,19,Hispanic/Latino,
+2020-02-07 19:49:23,21,"4
+Positive
+",3,,Male,,White,4,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,2,4,4,4,3,2,4,4,2,3,2,4,3,2,1,4,2,2,1,2,5,1,5,1,1,5,1,1,4,4,3,4,Computer Science,U.S. Student,Male,21,Caucasian,
+2020-02-07 20:43:32,19,"2
+Negative
+",2,,Female,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,3,3,3,4,2,4,2,2,4,4,2,2,4,2,4,4,4,4,4,4,4,3,4,4,1,5,2,4,4,2,4,4,Psychology with Latin American Studies and Spanish minors,U.S. Student,Female,19,Caucasian,
+2020-02-07 21:40:47,23,"3
+Neutral
+",4,,Male,,Black or African American,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 5 best students (Better than 95 other students),4,3,4,3,3,3,3,3,3,4,3,4,4,4,3,4,4,4,3,3,4,4,4,4,4,3,3,4,3,4,4,4,3,Computer Science,International Student,Male,23,African,
+2020-02-07 23:12:48,19,"2
+Negative
+",2,,Female,,White,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",5,1,5,5,1,5,1,1,5,5,4,2,5,1,5,3,5,5,3,2,5,2,5,2,1,4,1,5,5,1,4,4,Business Administration,U.S. Student,Female,19,Caucasian,
+2020-02-07 23:21:53,20,"4
+Positive
+","5
+Very Confident
+",,Male,,Native Hawaiian or Other Pacific Islander,"5
+Very Positive
+",4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"5
+Very likely
+",4,1,5,4,1,4,1,1,4,4,1,1,5,1,5,5,5,4,2,4,4,4,3,3,4,4,2,2,3,3,4,3,"Biology, Art and Design",U.S. Student,Male,20,Asian or Pacific Islander,
+2020-02-10 17:22:56,19,"3
+Neutral
+",3,,Female,,White,4,2,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,4,1,4,4,1,4,1,1,5,5,2,4,2,2,5,5,5,5,1,2,5,1,4,2,2,5,1,1,5,1,2,5,Family and Human Services,U.S. Student,Female,19,Caucasian,
+2020-02-11 13:55:31,20,"4
+Positive
+",2,,Female,,White,3,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,2,4,4,2,4,2,2,4,,2,2,4,1,4,2,4,4,5,5,2,4,3,3,4,3,5,1,3,4,4,5,psychology,U.S. Student,Female,20,Caucasian,
+2020-02-11 19:34:09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-02-13 15:12:40,18,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,White,"1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",3,2,4,4,2,4,2,2,3,3,1,3,3,1,4,2,4,4,4,4,2,4,4,2,2,3,2,4,2,4,2,4,Human Physiology,U.S. Student,Female,18,Caucasian,
+2020-02-13 17:47:57,21,,,,Female,,White,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-02-13 18:55:58,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-02-15 02:14:45,21,"3
+Neutral
+",4,,Male,,"Hispanic, Latinx or Spanish Origin",3,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,4,4,3,4,2,3,2,5,3,2,1,3,4,1,4,2,5,5,5,5,3,5,4,1,2,4,2,5,,1,3,1,Advertising,U.S. Student,Male,21,Hispanic/Latino,
+2020-02-17 18:11:47,19,"2
+Negative
+",2,,Male,,White,"1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,3,3,4,4,2,4,1,2,4,3,2,4,3,4,4,4,4,4,5,5,3,5,4,,3,3,3,2,4,4,5,2,Human Physiology,U.S. Student,Male,19,Caucasian,
+2020-02-18 12:13:36,19,"4
+Positive
+",4,,Male,,Asian,4,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,4,2,5,4,1,4,1,1,4,4,3,4,2,2,4,3,4,4,5,5,4,3,4,3,3,4,2,2,3,2,3,3,Business,U.S. Student,Male,19,Asian or Pacific Islander,
+2020-02-19 13:04:20,20,"2
+Negative
+",2,,Female,,White,"1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",3,4,3,4,2,3,2,2,3,4,1,1,4,1,5,3,5,4,4,4,2,5,3,4,3,3,2,4,3,2,2,3,Public Relations,U.S. Student,Female,20,"Caucasian,Native American",
+2020-02-19 16:41:37,20,"2
+Negative
+",2,,Male,,"Hispanic, Latinx or Spanish Origin",2,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),4,3,4,4,4,2,3,3,3,3,4,2,2,4,1,3,3,5,4,5,4,3,4,3,4,3,3,2,4,3,2,2,3,"Journalism ",U.S. Student,Male,20,Hispanic/Latino,
+2020-02-20 17:39:19,19,,,,Female,,"Hispanic, Latinx or Spanish Origin",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-02-22 16:43:05,19,"2
+Negative
+",4,,Female,,White,3,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,3,2,4,4,2,4,1,2,4,4,3,4,3,4,4,3,3,3,4,4,4,4,4,4,3,4,4,4,4,2,4,4,"Communication Disorders and Sciences ",U.S. Student,Female,19,Caucasian,
+2020-02-22 23:39:46,19,"1
+Very Negative
+","1
+Not at all confident
+",,Male,,White,"1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",4,3,3,3,4,3,3,3,3,3,2,2,4,2,2,3,3,2,4,4,3,3,3,3,3,3,3,3,3,3,3,3,"Journalism ",U.S. Student,Male,19,Caucasian,
+2020-02-23 13:24:07,21,"1
+Very Negative
+","5
+Very Confident
+",,Female,,Asian,"1
+Very negative
+","1
+Very encouraging
+",An easy class in your major that doesn’t cover many new skills or much new material.,In the 30 worst students (70 other students are better than you),"1
+Very unlikely
+",5,1,5,5,1,5,1,1,5,5,1,1,5,1,5,4,4,3,1,1,5,1,5,3,1,5,1,5,5,1,5,5,Advertising,U.S. Student,Female,21,Asian or Pacific Islander,
+2020-02-24 21:51:24,18,"3
+Neutral
+",4,,Male,,White,2,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"5
+Very likely
+",4,2,5,5,1,4,2,2,4,5,3,2,5,1,5,3,5,5,2,1,5,1,5,2,2,5,1,5,5,1,1,4,Psychology,U.S. Student,Male,18,Caucasian,
+2020-02-25 12:57:27,18,"2
+Negative
+",3,,Female,,White,2,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),2,3,2,3,4,2,3,2,2,4,4,2,4,4,2,3,4,4,4,5,4,2,4,3,4,4,3,2,3,4,3,4,4,Psychology,U.S. Student,Female,18,Caucasian,
+2020-02-26 14:15:15,19,"2
+Negative
+",2,,Female,,White,2,2,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,2,4,4,2,3,2,2,4,4,2,3,2,2,4,2,4,3,2,2,4,2,3,4,2,4,2,2,4,1,2,3,Psychology,U.S. Student,Female,19,Caucasian,
+2020-02-27 14:18:47,21,"3
+Neutral
+",2,,Female,,Native Hawaiian or Other Pacific Islander,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",5,1,5,5,1,5,1,1,5,5,1,2,5,1,4,3,5,3,2,4,5,3,5,4,3,5,1,5,5,1,4,3,"Human physiology ",U.S. Student,Female,21,"Asian or Pacific Islander,Indian",
+2020-02-27 20:49:39,20,"2
+Negative
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",3,4,3,4,2,4,2,3,3,4,2,4,3,2,4,3,4,4,2,2,4,4,4,4,2,4,2,4,4,2,4,4,Psychology,U.S. Student,Female,20,Caucasian,
+2020-02-28 13:45:11,,"4
+Positive
+",4,,Male,,I prefer not to answer.,4,4,,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),,4,4,4,4,2,4,2,2,4,4,2,2,4,2,2,4,4,4,2,4,4,4,4,4,4,4,2,5,4,4,4,4,undeclared,U.S. Student,Male,,Caucasian,
+2020-02-28 16:26:52,22,"4
+Positive
+",3,,Female,,"Hispanic, Latinx or Spanish Origin","5
+Very Positive
+",4,An easy class in your major that doesn’t cover many new skills or much new material.,In the 30 worst students (70 other students are better than you),"5
+Very likely
+",4,1,3,3,1,2,1,1,4,4,1,1,1,1,4,1,4,2,2,2,3,3,5,2,1,5,1,5,4,1,4,2,Psychology,U.S. Student,Female,22,Hispanic/Latino,
+2020-03-01 13:59:22,19,"2
+Negative
+",2,,Male,,White,"1
+Very negative
+",4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,4,2,4,4,2,4,2,4,4,4,2,4,4,2,4,4,4,4,4,4,4,4,4,4,2,4,4,4,4,4,4,4,"Journalism ",U.S. Student,Male,19,Caucasian,
+2020-03-01 18:32:07,19,"2
+Negative
+",2,,Male,,Native Hawaiian or Other Pacific Islander,2,2,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),4,4,4,4,4,1,3,2,2,4,4,1,2,3,1,4,4,4,4,2,1,4,2,4,3,1,5,1,3,5,5,4,4,Business administration,U.S. Student,Male,19,Caucasian,
+2020-03-02 16:08:02,21,"4
+Positive
+",4,,Female,,"Hispanic, Latinx or Spanish Origin",3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 10 best students (Better than 90 other students),3,3,1,4,5,3,3,1,2,4,4,2,2,3,1,5,5,4,4,2,1,4,3,4,3,2,4,1,3,5,1,3,3,Psychology,U.S. Student,Female,21,Hispanic/Latino,
+2020-03-02 16:33:55,19,"2
+Negative
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),2,3,4,5,5,1,3,2,4,2,4,1,2,5,1,3,2,4,3,3,4,3,5,3,3,2,3,3,3,2,3,4,4,Communication Disorders and Sciences,U.S. Student,Female,19,"Caucasian,Asian or Pacific Islander",
+2020-03-02 17:15:34,20,"3
+Neutral
+",3,,Female,,"Hispanic, Latinx or Spanish Origin",3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the 30 worst students (70 other students are better than you),3,2,3,3,2,2,2,2,2,3,3,2,2,3,2,3,2,3,3,2,2,3,3,2,2,2,2,2,2,2,2,2,2,undeclared,U.S. Student,Female,20,Hispanic/Latino,
+2020-03-02 23:26:03,24,"3
+Neutral
+",3,,Female,,"Hispanic, Latinx or Spanish Origin",3,3,An easy class not in your major.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,4,1,4,4,1,5,1,2,4,4,3,1,5,1,4,4,5,5,1,4,4,3,2,3,2,4,1,3,2,4,2,3,"general science ",U.S. Student,Female,24,Hispanic/Latino,
+2020-03-02 23:44:06,19,"2
+Negative
+",2,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),"1
+Very unlikely
+",4,2,3,4,2,4,2,3,3,4,2,2,5,1,3,3,5,4,1,1,4,2,4,2,2,4,2,4,4,2,3,3,"Psychology, French",U.S. Student,Female,19,Caucasian,
+2020-03-03 14:25:56,20,"1
+Very Negative
+","1
+Not at all confident
+",,Male,,White,"1
+Very negative
+","1
+Very encouraging
+",An easy class not in your major.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",3,3,5,5,1,3,1,1,3,3,3,5,1,3,3,1,4,4,5,5,2,4,3,3,5,3,2,3,2,2,4,3,Sociology,U.S. Student,Male,20,Caucasian,
+2020-03-03 14:59:49,20,"4
+Positive
+","5
+Very Confident
+",,Female,,Asian,4,"5
+Very Positive
+",A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),4,2,4,5,4,1,3,1,1,3,3,1,1,5,1,3,1,4,1,5,5,2,3,2,2,3,3,1,2,2,2,2,1,Psychology,U.S. Student,Female,20,"Caucasian,Indian",
+2020-03-03 17:02:15,18,"3
+Neutral
+",4,,Female,,"Hispanic, Latinx or Spanish Origin",2,3,An easy class not in your major.,In the top 30 best students (Better than 70 other students),2,4,2,4,4,1,5,1,1,4,4,2,3,3,1,,4,4,4,2,2,4,4,4,2,1,5,1,5,5,3,4,4,Psychology,U.S. Student,Female,18,Hispanic/Latino,
+2020-03-03 19:24:56,19 (almost 20),"4
+Positive
+",3,,Male,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,3,3,3,3,3,4,3,3,3,3,2,4,2,2,3,2,3,1,2,2,4,4,4,3,1,4,1,5,4,2,1,3,Economics,U.S. Student,Male,19,Caucasian,
+2020-03-03 20:46:50,18,"2
+Negative
+","1
+Not at all confident
+",,Female,,White,2,"1
+Very encouraging
+",A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",2,2,3,4,1,3,1,1,4,4,1,2,4,1,4,3,4,4,3,2,4,2,4,4,1,3,1,4,3,1,4,4,Psychology,U.S. Student,Female,18,Caucasian,
+2020-03-04 18:32:02,19,"3
+Neutral
+",2,,Male,,White,2,2,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 10 best students (Better than 90 other students),2,3,2,4,4,1,3,1,1,4,4,2,4,2,1,4,4,2,2,4,4,3,3,2,2,2,3,1,2,3,4,1,1,Economics,U.S. Student,Male,19,Caucasian,
+2020-03-04 22:35:01,24,"4
+Positive
+",4,,Female,,White,4,2,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,3,2,5,5,1,5,1,1,3,3,1,1,4,1,3,3,5,5,5,5,3,5,3,4,4,4,4,2,2,4,5,3,"communication disorders and sciences ",U.S. Student,Female,24,Caucasian,
+2020-03-05 18:42:20,18,"3
+Neutral
+",3,,Male,,Asian,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,3,4,3,4,3,3,3,3,3,3,3,3,3,3,1,2,2,2,3,3,3,1,4,2,2,2,2,4,4,2,2,1,Psychology,U.S. Student,Male,18,Asian or Pacific Islander,
+2020-03-06 16:28:05,21,"5
+Very Positive
+",4,,Female,,White,"5
+Very Positive
+","5
+Very Positive
+",A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,2,2,4,3,2,2,2,2,4,5,2,3,3,2,4,2,5,3,2,4,4,5,5,2,2,4,2,5,5,1,1,4,psychology,U.S. Student,Female,21,Caucasian,
+2020-03-09 00:21:34,18,"3
+Neutral
+",3,,Male,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 5 best students (Better than 95 other students),3,3,2,4,3,3,4,3,3,3,3,3,3,2,2,4,,3,4,2,3,4,3,3,3,2,2,2,3,3,3,3,4,Journalism,U.S. Student,Male,18,Caucasian,
+2020-03-09 16:47:00,19,"3
+Neutral
+",3,,Female,,White,3,3,An easy class not in your major.,In the 10 worst students (90 other students are better than you),3,5,1,3,3,3,3,2,2,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,psychology,U.S. Student,Female,19,Caucasian,
+2020-03-09 21:26:00,19,"2
+Negative
+",2,,Male,,White,2,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,2,2,3,3,2,2,3,2,2,4,1,2,3,2,3,3,4,3,3,3,4,3,4,3,2,4,1,4,4,3,2,4,Psychology,U.S. Student,Male,19,Caucasian,
+2020-03-10 10:43:01,21,"2
+Negative
+",3,,Female,,White,2,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",2,4,3,3,4,3,4,3,2,2,2,4,4,2,4,2,2,2,4,4,3,4,3,4,4,2,4,4,2,4,2,4,Accounting,U.S. Student,Female,21,Caucasian,
+2020-03-10 17:14:11,19,"3
+Neutral
+",3,,Female,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,3,3,3,3,3,2,3,3,3,4,2,2,3,3,3,3,3,4,2,3,3,2,4,2,3,3,2,2,2,4,3,3,undeclared,U.S. Student,Female,19,Caucasian,
+2020-03-10 17:43:33,18,"3
+Neutral
+",3,,Female,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,2,4,4,2,3,2,2,3,3,2,2,3,2,3,3,4,4,3,4,3,4,4,4,4,3,3,3,3,3,3,3,Human Physiology,U.S. Student,Female,18,Caucasian,
+2020-03-10 19:17:09,19,"2
+Negative
+",3,,Male,,White,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),3,4,2,4,4,2,3,2,2,4,5,4,4,2,2,4,4,5,5,2,1,5,3,4,2,1,4,2,5,5,2,1,4,psychology,U.S. Student,Male,19,Caucasian,
+2020-03-10 19:46:35,20,"2
+Negative
+",2,,Male,,White,3,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,2,4,5,5,1,4,2,1,3,4,1,1,4,1,4,2,4,4,4,4,3,5,4,2,2,3,2,5,2,2,4,4,Psychology,U.S. Student,Male,20,Caucasian,
+2020-03-10 22:57:32,19,"2
+Negative
+","1
+Not at all confident
+",,Female,,"Hispanic, Latinx or Spanish Origin","1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",4,1,3,4,1,4,1,1,3,3,2,4,1,2,3,3,4,4,1,3,3,4,3,2,2,4,1,5,3,1,3,2,psychology,U.S. Student,Female,19,Hispanic/Latino,
+2020-03-11 15:28:41,18,"1
+Very Negative
+","1
+Not at all confident
+",,Female,,White,"1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",4,2,3,3,3,3,3,3,3,3,3,3,2,1,4,3,5,2,5,5,2,5,4,4,3,3,2,3,3,3,3,4,psychology,U.S. Student,Female,18,Caucasian,
+2020-03-11 16:03:22,21,"3
+Neutral
+",2,,Female,,White,3,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",4,1,4,4,1,4,1,1,4,4,1,1,5,1,4,2,4,4,4,4,3,4,4,2,2,2,2,2,4,3,1,2,psychology,U.S. Student,Female,21,Caucasian,
+2020-03-11 17:08:11,18,"4
+Positive
+",3,,Male,,White,3,4,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,3,4,3,2,3,3,2,4,3,3,4,4,2,3,4,3,3,3,4,3,3,4,3,2,3,4,3,2,3,3,4,FHS,U.S. Student,Male,18,Caucasian,
+2020-03-11 21:28:13,18,"4
+Positive
+",4,,Female,,White,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"5
+Very likely
+",4,2,4,4,2,4,2,2,4,4,1,3,3,1,3,3,4,4,2,3,4,4,4,3,2,4,2,4,4,2,3,4,3PM,U.S. Student,Female,18,Caucasian,
+2020-03-11 22:44:29,18,"2
+Negative
+",2,,Female,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 5 best students (Better than 95 other students),2,2,3,3,1,2,3,2,2,3,3,2,3,3,2,2,1,1,4,2,4,1,2,2,5,3,2,2,2,3,3,1,1,"UNDECLARED ",U.S. Student,Female,18,"Caucasian,Other",stop asking the same qustions
+2020-03-12 00:03:40,18,"2
+Negative
+",4,,Male,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),2,4,3,4,4,2,4,2,2,4,5,3,3,4,3,5,3,5,5,1,2,5,1,5,1,1,5,1,5,3,5,2,4,Chemistry,U.S. Student,Male,18,Caucasian,
+2020-03-12 01:43:06,21,"2
+Negative
+",4,,Male,,White,3,2,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 10 best students (Better than 90 other students),3,4,3,3,2,4,3,3,2,4,3,3,2,4,2,3,3,2,4,4,3,4,3,3,5,4,3,2,3,3,5,1,5,Environmental Studies/ International Studies,U.S. Student,Male,21,Caucasian,
+2020-03-12 10:20:28,19,"3
+Neutral
+",3,,Female,,Black or African American,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,psychology,U.S. Student,Female,19,African,
+2020-03-12 11:19:58,19,"2
+Negative
+","1
+Not at all confident
+",,Male,,American Indian or Alaska Native,"1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,3,5,3,4,3,3,3,3,2,2,3,4,2,2,4,2,4,4,5,5,3,4,3,4,4,3,3,4,3,2,2,2,Business Administration,U.S. Student,Male,19,Native American,
+2020-03-12 16:36:04,18,"4
+Positive
+","5
+Very Confident
+",,Female,,"Hispanic, Latinx or Spanish Origin",4,4,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,,U.S. Student,Female,,"Hispanic/Latino,Other",
+2020-03-12 19:31:27,20,"4
+Positive
+",4,,Female,,Asian,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,2,4,4,1,3,1,1,4,4,1,4,2,1,3,3,4,3,1,3,3,3,3,2,2,4,2,4,3,3,3,3,psychology,International Student,Female,20,Asian or Pacific Islander,
+2020-03-12 21:35:05,19,"2
+Negative
+",2,,Male,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),4,4,1,3,3,2,4,2,2,4,4,1,3,4,1,4,3,4,3,4,4,3,3,4,3,2,4,2,4,4,3,4,4,Journalism,U.S. Student,Male,19,Caucasian,
+2020-03-13 01:50:36,19,"2
+Negative
+",4,,Female,,Asian,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"5
+Very likely
+",4,2,4,4,2,4,3,2,4,4,2,2,3,2,4,5,5,4,5,3,4,4,5,2,4,4,2,4,2,2,4,1,CDS psychology,U.S. Student,Female,19,Asian or Pacific Islander,
+2020-03-13 10:44:07,21,"4
+Positive
+","5
+Very Confident
+",,Male,,White,4,4,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,2,4,3,3,3,3,3,3,2,2,3,3,3,1,3,4,4,3,4,3,3,4,3,3,1,3,2,3,3,3,3,4,"Communication Disorders and Sciences ",U.S. Student,Male,21,Caucasian,
+2020-03-13 12:04:40,,"3
+Neutral
+",2,,Male,,White,3,2,An easy class not in your major.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,3,5,2,3,3,3,3,4,2,3,3,3,3,3,3,3,4,4,5,4,3,3,2,3,4,3,3,2,3,2,2,3,psychology,U.S. Student,Male,20,Caucasian,
+2020-03-13 12:35:48,19,"2
+Negative
+","1
+Not at all confident
+",,Female,,Black or African American,"1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),"1
+Very unlikely
+",1,1,2,4,3,3,3,3,3,4,1,4,1,3,1,1,2,1,1,1,5,3,5,1,1,5,1,4,5,1,1,1,public relations,U.S. Student,Female,19,"Caucasian,African",
+2020-03-13 13:32:37,20,"2
+Negative
+",2,,Female,,"Hispanic, Latinx or Spanish Origin","1
+Very negative
+",3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),"1
+Very unlikely
+",4,2,4,4,2,4,2,2,3,4,1,1,4,1,2,3,4,4,2,2,4,2,4,3,1,4,1,3,3,1,2,4,Psychology,U.S. Student,Female,20,Hispanic/Latino,
+2020-03-13 19:16:44,19,"4
+Positive
+",4,,Female,,Black or African American,4,2,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),4,5,1,5,5,1,5,1,1,5,5,1,1,5,1,5,5,5,5,1,1,5,1,5,1,1,5,1,5,5,1,5,5,Sociology,U.S. Student,Female,19,African,
+2020-03-13 23:20:57,18,"3
+Neutral
+",2,,Female,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),2,4,2,4,4,2,4,2,2,4,4,2,2,4,1,4,4,5,5,4,4,3,4,4,4,4,3,4,3,4,2,4,4,Human Physiology,U.S. Student,Female,18,Caucasian,
+2020-03-14 00:59:01,20,"2
+Negative
+",2,,Male,,"Hispanic, Latinx or Spanish Origin","5
+Very Positive
+","5
+Very Positive
+",An easy class not in your major.,In the top 10 best students (Better than 90 other students),3,5,5,5,3,2,1,5,2,2,5,1,2,2,4,3,2,4,5,1,2,2,3,2,3,2,2,2,2,2,4,5,5,computer scieencee,U.S. Student,Male,20,Hispanic/Latino,
+2020-03-14 15:04:14,24,"3
+Neutral
+",3,,Female,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 10 best students (Better than 90 other students),4,1,5,1,2,5,2,5,5,1,1,5,5,1,5,1,3,1,1,5,5,1,5,1,5,5,1,5,1,1,5,1,3,Political Science,U.S. Student,Female,24,Caucasian,
+2020-03-15 22:42:09,18,"3
+Neutral
+",3,,Male,,White,4,2,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,4,1,4,4,1,3,1,1,4,4,1,1,4,1,4,4,4,4,1,2,4,1,4,1,1,4,1,3,4,1,2,4,Psychology,U.S. Student,Male,18,"Caucasian,Asian or Pacific Islander",
+2020-03-15 23:14:36,19,"2
+Negative
+",4,,Male,,White,"1
+Very negative
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),2,2,3,3,2,3,3,4,2,3,3,3,2,2,2,3,2,2,3,3,2,4,2,3,4,4,3,3,2,2,3,3,2,business,U.S. Student,Male,19,Caucasian,
+2020-03-17 00:10:57,21,"3
+Neutral
+",4,,Female,,"Hispanic, Latinx or Spanish Origin",3,3,An easy class not in your major.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,5,1,5,4,1,4,1,2,4,5,1,1,4,1,2,4,4,3,1,1,5,4,5,4,1,4,1,5,5,1,4,4,Journalism and Communications,U.S. Student,Female,21,Hispanic/Latino,
+2020-03-17 12:43:58,23,"3
+Neutral
+",3,,Male,,White,3,4,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),4,3,2,2,2,2,2,2,2,2,2,2,2,4,2,2,3,3,3,3,3,2,2,3,4,4,4,3,3,3,3,2,3,Computer Science,U.S. Student,Male,23,Caucasian,
+2020-03-17 12:53:00,23,"3
+Neutral
+",3,,Male,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,In the top 30 best students (Better than 70 other students),3,3,3,3,2,2,4,2,2,4,3,3,2,2,3,3,3,3,3,3,4,4,3,2,2,2,3,3,3,3,3,2,2,computer science,U.S. Student,Male,23,Caucasian,
+2020-03-18 01:28:27,19,"3
+Neutral
+",3,,Female,,"Hispanic, Latinx or Spanish Origin",3,3,A difficult class in your major that is well known for making students more successful after they graduate.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,3,3,3,3,4,3,3,3,4,3,4,4,3,2,3,3,3,2,4,5,2,5,3,4,4,3,3,2,3,4,4,3,"Human Physiology ",U.S. Student,Female,19,Hispanic/Latino,
+2020-03-18 01:34:19,21,"2
+Negative
+",2,,Female,,White,3,3,A difficult class in your major that is well known for making students more successful after they graduate.,In the top 30 best students (Better than 70 other students),2,5,1,5,4,3,2,2,1,5,5,2,3,4,3,4,1,5,5,5,5,3,5,3,3,3,3,2,3,2,2,4,3,Architecture,U.S. Student,Female,21,Caucasian,
+2020-03-18 07:13:22,20,"5
+Very Positive
+",4,,Female,,Asian,"5
+Very Positive
+",3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),"1
+Very unlikely
+",3,3,4,5,3,5,3,4,4,5,3,3,2,2,3,3,3,4,3,4,4,5,3,3,2,3,1,3,3,2,2,2,Education,International Student,Female,20,Asian or Pacific Islander,
+2020-03-18 15:30:08,21,"3
+Neutral
+",3,,Male,,Asian,2,3,An easy class not in your major.,In the 30 worst students (70 other students are better than you),2,2,4,2,3,3,3,3,3,3,3,4,4,2,4,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,CDS,U.S. Student,Male,21,Asian or Pacific Islander,
+2020-03-18 18:15:04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-03-21 19:37:12,20,"3
+Neutral
+",4,,Non-binary,,White,3,3,An easy class in your major that doesn’t cover many new skills or much new material.,Around the middle of the class (not the top 30 students nor the bottom 30 students. One of 40 students in the middle),3,3,2,4,3,3,3,3,3,3,3,2,2,4,3,4,4,4,4,2,2,4,4,4,3,2,4,2,4,4,3,3,2,Lingustics,U.S. Student,Not listed here,20,Caucasian,

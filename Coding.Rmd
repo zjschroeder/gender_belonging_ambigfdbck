@@ -1,0 +1,272 @@
+---
+title: "Coding"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages}
+library(stringr)
+library(rio)
+library(apaTables) # for correlation tables
+library(pwr)
+library(multicon)
+library(corx)
+library(broom)
+library(car)
+library(ggdag)
+library(psych) # for covariance and correlation functions
+library(tidyverse)
+library(forcats)
+library(dplyr)
+library(knitr)
+library(DataCombine)
+library(emmeans)
+library(here)
+library(janitor)
+library(forcats)
+library(ggplot2)
+library(lubridate)
+library(sjPlot)
+library(stringr)
+here::here()
+```
+
+# Professor Feedback
+
+## Round 1
+
+```{r}
+andrew <- rio::import(here::here("Coding Study 2 Data/Round 1 Analyses/Coding_121521_Completed_Andrew.xlsx"))
+jason <- rio::import(here::here("Coding Study 2 Data/Round 1 Analyses/jason_121521(1995).xlsx"))
+julia <- rio::import(here::here("Coding Study 2 Data/Round 1 Analyses/Julia_Completed_Coding_121521.xlsx"))
+```
+
+## Round 2
+
+```{r}
+second_andrew <- rio::import(here::here("coding/coding_021122_andrew.xlsx"))
+second_jason <- rio::import(here::here("coding/coding_021122_jason.xlsx"))
+second_julia <- rio::import(here::here("coding/coding_021122_julia.xlsx"))
+```
+
+
+```{r coding 1}
+data <- tibble(
+  "pid" = andrew[-1,1],
+  "prompt" = andrew[-1,2],
+  "prof_ja" = jason[-1,3],
+  "prof_ju" =julia[-1,3],
+  "prof_a" = andrew[-1,3],
+  "self_ja" =jason[-1,4],
+  "self_ju" =julia[-1,4],
+  "self_a" = andrew[-1,4],
+  "inxn_ja" =jason[-1,5],
+  "inxn_ju" =julia[-1,5],
+  "inxn_a" = andrew[-1,5],
+  "sos_ja" = jason[-1,6],
+  "sos_ju" = julia[-1,6],
+  "sos_a" = andrew[-1,6],
+  "notes_ja" = jason[-1, 7],
+  "notes_ju" = julia[-1, 7],
+  "notes_a" = andrew[-1, 7],
+  "d_ja" = jason[-1, 8],
+  "d_ju" = julia[-1, 8],
+  "d_a" = andrew[-1, 8]
+)
+data <- data[1:62,]
+```
+
+```{r coding 2}
+data2 <- tibble(
+  "pid" =      second_andrew[,1],
+  "prompt" =   second_andrew[,2],
+  "prof_ja" =  second_jason[,3],
+  "prof_ju" =  second_julia[,3],
+  "prof_a" =   second_andrew[,3],
+  "self_ja" =  second_jason[,4],
+  "self_ju" =  second_julia[,4],
+  "self_a" =   second_andrew[,4],
+  "inxn_ja" =  second_jason[,5],
+  "inxn_ju" =  second_julia[,5],
+  "inxn_a" =   second_andrew[,5],
+  "sos_ja" =   second_jason[,6],
+  "sos_ju" =   second_julia[,6],
+  "sos_a" =    second_andrew[,6],
+  "notes_ja" = second_jason[, 7],
+  "notes_ju" = second_julia[, 7],
+  "notes_a" =  second_andrew[, 7],
+  "d_ja" =     second_jason[, 8],
+  "d_ju" =     second_julia[, 8],
+  "d_a" =      second_andrew[, 8]
+)
+data2 <- data2[-(1:62),]
+```
+
+```{r}
+rd <- rbind(data, data2)
+rd$pid_split <- rd$pid
+rd$pid <- 1:nrow(rd)
+
+rd[,3:20][is.na(rd[,3:20])] <- "neutral"
+
+coded_cols <- unlist(rd[,3:14]) %>% 
+  tolower() %>% 
+  gsub("[[:punct:]]", "", .) %>% 
+  matrix(., ncol = 12) %>% 
+  as_tibble()
+
+rd[,3:14] <- coded_cols
+
+rd <- rd %>% 
+  mutate(
+    prof_ja = factor(prof_ja, labels = c("neutral", "negative", "neutral", "positive")),
+    prof_ju = factor(prof_ju),
+    prof_a = factor(prof_a),
+    self_ja = factor(self_ja),
+    self_ju = factor(self_ju),
+    self_a = factor(self_a),
+    inxn_ja = factor(inxn_ja),
+    inxn_ju = factor(inxn_ju, labels = c("negative", "positive", "neutral", "neutral", "positive", "neutral")),
+    inxn_a = factor(inxn_a, labels = c("negative", "negative", "neutral", "positive"))
+  )
+coded_data <- rd %>% 
+  select(prof_ja:inxn_a) %>% 
+  map(., ~forcats::fct_relevel(.x, c("negative", "neutral", "positive"))) %>% as_tibble()
+
+coded_data$pid <- rd$pid
+```
+
+```{r}
+alpha_data <- coded_data %>% 
+  select(prof_ja:inxn_a) 
+
+alpha_data <- lapply(alpha_data, as.numeric) %>% 
+  as_tibble()
+
+alpha_data %>% 
+  select(prof_ja:prof_a) %>% 
+  psych::alpha()
+
+alpha_data %>% 
+  select(self_ja:self_a) %>% 
+  psych::alpha()
+
+alpha_data %>% 
+  select(inxn_ja:inxn_a) %>% 
+  psych::alpha()
+```
+
+```{r}
+coded_scores <- tibble(
+  professor = alpha_data %>% 
+    select(prof_ja:prof_a) %>% rowSums(.),
+  self = alpha_data %>% 
+    select(self_ja:self_a) %>% rowSums(.),
+  interaction = alpha_data %>% 
+    select(inxn_ja:inxn_a) %>% rowSums(.)
+)
+coded_scores <- round(coded_scores/3, 0)
+coded_scores <- coded_scores %>% 
+  mutate(
+    pid = rd$pid,
+    professor = factor(professor, labels = c("Negative", "Neutral", "Positive")),
+    self = factor(self, labels = c("Negative", "Neutral", "Positive")),
+    interaction = factor(interaction, labels = c("Negative", "Neutral", "Positive"))
+  )
+```
+
+
+# Quanteda
+
+```{r text analysis packages}
+# Classic Packages
+library(tidyverse)
+library(psych)
+library(lubridate)
+
+# Quanteda suite
+library(quanteda)
+library(quanteda.dictionaries) # includes liwcalike function
+library(quanteda.corpora) # Datasets & tutorials for quanteda
+library(quanteda.textmodels)
+library(quanteda.textstats)
+library(quanteda.textplots)
+library(tm)
+
+# Used for reading in text
+library(readtext)
+
+# Other packages for examples
+library(newsmap)
+library(seededlda)
+```
+
+```{r data import}
+scenario_thoughts <- readxl::read_excel(here::here("Coding Study 2 Data/Coding_021122.xlsx"), 
+                       sheet = 2)
+typical_feelings <- readxl::read_excel(here::here("Coding Study 2 Data/Coding_021122.xlsx"), 
+                       sheet = 3)
+imagined_feelings <- readxl::read_excel(here::here("Coding Study 2 Data/Coding_021122.xlsx"), 
+                       sheet = 4)
+inxn_desc <- rd$prompt
+pid <- rd$pid
+txt <- tibble(pid, inxn_desc, scenario_thoughts, typical_feelings, imagined_feelings)
+x <- reshape2::melt(txt,
+                    id.vars = c("pid"), 
+                    measure.vars = c("inxn_desc", "scenario_thoughts", "typical_feelings", "imagined_feelings"),
+                    variable.name = "prompt", value.name = "text")
+
+corp <- corpus(x, text_field = 3)
+#summary(corp)
+```
+
+```{r dictionaries}
+dict_mpd <- dictionary(file = here::here("dictionary/MPD.dic"), encoding = "UTF-8")
+dict_posneg <- data_dictionary_LSD2015
+```
+
+```{r inxn perception}
+toks <- tokens(corp, remove_punct = T)
+dfmat <- dfm(toks)
+
+# MENTAL PERCEPTION
+ment_perc <- dfm_lookup(dfmat, dictionary = dict_mpd, levels = 1)
+
+mp <- quanteda::convert(ment_perc, 
+              to = "data.frame")
+
+# POSITIVE AND NEGATIVE TERMS
+pos_neg <- dfm_lookup(dfmat, dictionary = dict_posneg, levels = 1)
+pn <- quanteda::convert(pos_neg, 
+              to = "data.frame")
+```
+
+## Re gathering
+
+```{r}
+long_tib <- left_join(mp, pn, by = "doc_id")
+lt <- cbind(x, long_tib)
+
+text_full <- pivot_wider(lt, 
+                 id_cols = "pid", 
+                 names_from = c("prompt"),
+                 values_from = c("Experience", "Agency", "PatientEmotion",
+                                 "AgentEmotion", "MindOverall", "negative",
+                                 "positive", "neg_positive", "neg_negative"))
+text_data <- left_join(coded_scores, text_full, by = "pid")
+text_data <- left_join(text_data, txt, by = "pid")
+```
+
+
+
+```{r}
+save(text_data, file = "text_data.RData")
+```
+
+
+
